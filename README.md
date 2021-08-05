@@ -7,7 +7,7 @@ You have to install Python Environment to working on this project. You can find 
 
 #### Second Step
 After installed the Python Environment, activate it. Then copy the link below and paste it into your terminal.
-`https://github.com/talhakoylu/SummerInternshipBackend.git`
+`git clone https://github.com/talhakoylu/SummerInternshipBackend.git`
 
 #### Third Step
 Open the **config/** folder in the package. There is a file named **example-settings.py**. Let's rename the file with this **"settings.py"**. 
