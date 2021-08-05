@@ -1,0 +1,541 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-05 14:45+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\book\models\book_page_model.py:11
+msgid "Orta"
+msgstr "Center"
+
+#: .\book\models\book_page_model.py:12
+msgid "Üst"
+msgstr "Top"
+
+#: .\book\models\book_page_model.py:13
+msgid "Alt"
+msgstr "Bottom"
+
+#: .\config\settings.py:131
+msgid "English"
+msgstr ""
+
+#: .\config\settings.py:132
+msgid "Turkish"
+msgstr ""
+
+#: .\constants\account_strings.py:5
+msgid "Erkek"
+msgstr "Male"
+
+#: .\constants\account_strings.py:6
+msgid "Kadın"
+msgstr "Female"
+
+#: .\constants\account_strings.py:7
+msgid "Other"
+msgstr ""
+
+#: .\constants\account_strings.py:8 .\constants\account_strings.py:24
+#: .\constants\account_strings.py:47 .\constants\book_strings.py:59
+#: .\constants\quiz_strings.py:32
+msgid "Çocuk"
+msgstr "Child"
+
+#: .\constants\account_strings.py:9 .\constants\account_strings.py:32
+#: .\constants\account_strings.py:46
+msgid "Ebeveyn"
+msgstr "Parent"
+
+#: .\constants\account_strings.py:10 .\constants\account_strings.py:41
+#: .\constants\school_strings.py:14
+msgid "Eğitmen"
+msgstr "Instructor"
+
+#: .\constants\account_strings.py:11
+msgid "Default"
+msgstr ""
+
+#: .\constants\account_strings.py:12
+msgid "Yönetici"
+msgstr "Administrator"
+
+#: .\constants\account_strings.py:13
+msgid "Kimlik Numarası"
+msgstr "Identity Number"
+
+#: .\constants\account_strings.py:14
+msgid "Doğum Tarihi"
+msgstr "Birth Date"
+
+#: .\constants\account_strings.py:15
+msgid "Cinsiyet"
+msgstr "Gender"
+
+#: .\constants\account_strings.py:16
+msgid "Hesap Türü"
+msgstr "Account Type"
+
+#: .\constants\account_strings.py:17 .\constants\account_strings.py:21
+#: .\constants\account_strings.py:29 .\constants\account_strings.py:38
+msgid "Kullanıcı"
+msgstr "User"
+
+#: .\constants\account_strings.py:18
+msgid "Kullanıcılar"
+msgstr "Users"
+
+#: .\constants\account_strings.py:22 .\constants\account_strings.py:30
+#: .\constants\country_strings.py:13 .\constants\country_strings.py:15
+msgid "Şehir"
+msgstr "City"
+
+#: .\constants\account_strings.py:23
+msgid "Hobiler"
+msgstr "Hobies"
+
+#: .\constants\account_strings.py:25
+msgid "Çocuklar"
+msgstr "Children"
+
+#: .\constants\account_strings.py:26
+msgid ""
+"Kullanıcı bir çocuk olarak belirtilmemiş, ekleyebilmek için önce hesap "
+"ayarlarından statüsünü çocuk yapın!"
+msgstr ""
+"The user is not specified as a child, before you can add it, set its status "
+"as child in the account settings!"
+
+#: .\constants\account_strings.py:31
+msgid "Meslek"
+msgstr "Profession"
+
+#: .\constants\account_strings.py:33
+msgid "Ebeveynler"
+msgstr "Parents"
+
+#: .\constants\account_strings.py:34
+msgid ""
+"Kullanıcı bir ebevyn olarak belirtilmemiş, ekleyebilmek için önce hesap "
+"ayarlarından statüsünü ebeveyn yapın!"
+msgstr ""
+"The user is not specified as a parent, before you can add it, set its status "
+"as parent in the account settings!"
+
+#: .\constants\account_strings.py:39 .\constants\school_strings.py:9
+#: .\constants\school_strings.py:13
+msgid "Okul"
+msgstr "School"
+
+#: .\constants\account_strings.py:40
+msgid "Branş"
+msgstr "Branch"
+
+#: .\constants\account_strings.py:42
+msgid "Eğitmenler"
+msgstr "Instructors"
+
+#: .\constants\account_strings.py:43
+msgid ""
+"Kullanıcı bir eğitmen olarak belirtilmemiş, ekleyebilmek için önce hesap "
+"ayarlarından statüsünü eğitmen yapın!"
+msgstr ""
+"The user is not specified as a instructor, before you can add it, set its "
+"status as instructor in the account settings!"
+
+#: .\constants\account_strings.py:48
+msgid "Ebeveyn ve Çocuk Kaydı"
+msgstr "Parent and Child Record"
+
+#: .\constants\account_strings.py:49
+msgid "Ebeveyn ve Çocuk Kayıtları"
+msgstr "Parent and Child Records"
+
+#: .\constants\account_strings.py:52
+msgid ""
+"You cannot pass data other than: 1- default, 2- child, 3- parent, 4- "
+"instructor"
+msgstr ""
+
+#: .\constants\account_strings.py:53
+msgid "You cannot pass data other than: 1- male, 2- female, 3- other"
+msgstr ""
+
+#: .\constants\account_strings.py:54
+msgid "Identity number can only consist of numbers and cannot be long than 11."
+msgstr ""
+
+#: .\constants\account_strings.py:57
+msgid "To do this, you must be a parent."
+msgstr ""
+
+#: .\constants\account_strings.py:58
+msgid "To do this, you must be a child."
+msgstr ""
+
+#: .\constants\account_strings.py:59
+msgid "To do this, you must be a instructor."
+msgstr ""
+
+#: .\constants\account_strings.py:60
+msgid ""
+"To do this, you have to choose the school you work at from your profile "
+"page. If the problem persists, please contact the administrator."
+msgstr ""
+
+#: .\constants\account_strings.py:61
+msgid "To do this, you must be the owner of this class."
+msgstr ""
+
+#: .\constants\account_strings.py:62
+msgid "To do this, you must be the parent of this child."
+msgstr ""
+
+#: .\constants\book_strings.py:5 .\constants\book_strings.py:7
+msgid "Dil"
+msgstr "Language"
+
+#: .\constants\book_strings.py:6
+msgid "Diller"
+msgstr "Languages"
+
+#: .\constants\book_strings.py:8
+msgid "Dil Kodu"
+msgstr "Language Code"
+
+#: .\constants\book_strings.py:11 .\constants\quiz_strings.py:5
+msgid "Oluşturulma Tarihi"
+msgstr "Created At"
+
+#: .\constants\book_strings.py:12 .\constants\quiz_strings.py:6
+msgid "Güncellenme Tarihi"
+msgstr "Updated At"
+
+#: .\constants\book_strings.py:15 .\constants\book_strings.py:21
+#: .\constants\quiz_strings.py:10 .\constants\quiz_strings.py:33
+msgid "Başlık"
+msgstr "Title"
+
+#: .\constants\book_strings.py:16 .\constants\book_strings.py:30
+msgid "Açıklama"
+msgstr "Description"
+
+#: .\constants\book_strings.py:17 .\constants\book_strings.py:26
+msgid "Kategori"
+msgstr "Category"
+
+#: .\constants\book_strings.py:18
+msgid "Kategoriler"
+msgstr "Categories"
+
+#: .\constants\book_strings.py:22 .\constants\book_strings.py:27
+msgid "Seviye"
+msgstr "Level"
+
+#: .\constants\book_strings.py:23
+msgid "Kitap Seviyeleri"
+msgstr "Book Levels"
+
+#: .\constants\book_strings.py:28
+msgid "Kitap Dili"
+msgstr "Book Language"
+
+#: .\constants\book_strings.py:29 .\constants\book_strings.py:38
+msgid "İsim"
+msgstr "Name"
+
+#: .\constants\book_strings.py:31 .\constants\book_strings.py:42
+msgid "Yazar"
+msgstr "Author"
+
+#: .\constants\book_strings.py:32
+msgid "Sayfa Sayısı"
+msgstr "Number of Pages"
+
+#: .\constants\book_strings.py:33
+msgid "Kapak Görseli"
+msgstr "Cover Image"
+
+#: .\constants\book_strings.py:34 .\constants\book_strings.py:46
+#: .\constants\book_strings.py:58 .\constants\quiz_strings.py:9
+msgid "Kitap"
+msgstr "Book"
+
+#: .\constants\book_strings.py:35
+msgid "Kitaplar"
+msgstr "Books"
+
+#: .\constants\book_strings.py:39
+msgid "Soyisim"
+msgstr "Surname"
+
+#: .\constants\book_strings.py:40
+msgid "Fotoğraf"
+msgstr "Picture"
+
+#: .\constants\book_strings.py:41
+msgid "Biyografi"
+msgstr "Biography"
+
+#: .\constants\book_strings.py:43
+msgid "Yazarlar"
+msgstr "Authors"
+
+#: .\constants\book_strings.py:47
+msgid "Sayfa Başlığı"
+msgstr "Page Title"
+
+#: .\constants\book_strings.py:48
+msgid "Sayfa İçeriği"
+msgstr "Page Content"
+
+#: .\constants\book_strings.py:49
+msgid "Sayfa Numarası"
+msgstr "Page Number"
+
+#: .\constants\book_strings.py:50
+msgid "Görsel"
+msgstr "Image"
+
+#: .\constants\book_strings.py:51 .\constants\book_strings.py:53
+msgid "Görselin Konumu"
+msgstr "Image Position"
+
+#: .\constants\book_strings.py:52
+msgid "İçeriğin Konumu"
+msgstr "Content Position"
+
+#: .\constants\book_strings.py:54
+msgid "Kitap Sayfası"
+msgstr "Book Page"
+
+#: .\constants\book_strings.py:55
+msgid "Kitap Sayfaları"
+msgstr "Book Pages"
+
+#: .\constants\book_strings.py:60
+msgid "Kitap bitirildi mi?"
+msgstr "Is Finished?"
+
+#: .\constants\book_strings.py:61
+msgid "Hayır"
+msgstr "No"
+
+#: .\constants\book_strings.py:62
+msgid "Evet"
+msgstr "Yes"
+
+#: .\constants\book_strings.py:63
+msgid "Okuma Sayacı"
+msgstr "Reading Counter"
+
+#: .\constants\book_strings.py:64
+msgid "Okuma Geçmişi"
+msgstr "Reading History"
+
+#: .\constants\book_strings.py:65
+msgid "Okuma Geçmişleri"
+msgstr "Reading Histories"
+
+#: .\constants\book_strings.py:68
+msgid "The person whose record you want to see must be your child."
+msgstr ""
+
+#: .\constants\book_strings.py:69
+msgid "To see this page, you must be a parent or an instructor"
+msgstr ""
+
+#: .\constants\country_strings.py:5 .\constants\country_strings.py:7
+#: .\constants\country_strings.py:9 .\constants\country_strings.py:12
+msgid "Ülke"
+msgstr "Country"
+
+#: .\constants\country_strings.py:6
+msgid "Ülkeler"
+msgstr "Countries"
+
+#: .\constants\country_strings.py:8
+msgid "Ülke Kodu"
+msgstr "Country Code"
+
+#: .\constants\country_strings.py:14 .\constants\school_strings.py:5
+msgid "Şehirler"
+msgstr "Cities"
+
+#: .\constants\country_strings.py:16
+msgid "Şehir Kodu"
+msgstr "City Code"
+
+#: .\constants\general_strings.py:4
+msgid "You are already logged in!"
+msgstr ""
+
+#: .\constants\general_strings.py:5
+msgid "To do this, you must be an admin!"
+msgstr ""
+
+#: .\constants\quiz_strings.py:11
+msgid "Sınav Aktif Mi?"
+msgstr "Is the Quiz Active?"
+
+#: .\constants\quiz_strings.py:12 .\constants\quiz_strings.py:16
+#: .\constants\quiz_strings.py:31
+msgid "Sınav"
+msgstr "Quiz"
+
+#: .\constants\quiz_strings.py:13
+msgid "Sınavlar"
+msgstr "Quizes"
+
+#: .\constants\quiz_strings.py:17 .\constants\quiz_strings.py:20
+#: .\constants\quiz_strings.py:25 .\constants\quiz_strings.py:41
+msgid "Soru"
+msgstr "Question"
+
+#: .\constants\quiz_strings.py:18
+msgid "Konu"
+msgstr "Topic"
+
+#: .\constants\quiz_strings.py:19
+msgid "Rapor sayfasında, cevabın yanlış olması durumunda gösterilecek metin."
+msgstr ""
+"The text that will show in the report page if the given answer is wrong."
+
+#: .\constants\quiz_strings.py:21
+msgid "Sorular"
+msgstr "Questions"
+
+#: .\constants\quiz_strings.py:24 .\constants\quiz_strings.py:27
+#: .\constants\quiz_strings.py:43
+msgid "Cevap"
+msgstr "Answer"
+
+#: .\constants\quiz_strings.py:26
+msgid "Doğru Bir Cevap Mı?"
+msgstr "Is the Answer Correct?"
+
+#: .\constants\quiz_strings.py:28
+msgid "Cevaplar"
+msgstr "Answers"
+
+#: .\constants\quiz_strings.py:34 .\constants\quiz_strings.py:45
+msgid "Toplam Puan"
+msgstr "Total Point"
+
+#: .\constants\quiz_strings.py:35
+msgid "Çözülmüş Sınav Kaydı"
+msgstr "Solved Quiz Record"
+
+#: .\constants\quiz_strings.py:36
+msgid "Çözülmüş Sınav Kayıtları"
+msgstr "Solved Quiz Records"
+
+#: .\constants\quiz_strings.py:39
+msgid "Girilen Sınav"
+msgstr "Solved Quiz"
+
+#: .\constants\quiz_strings.py:40
+msgid "Girilen Sınav Başlığı"
+msgstr "Title of the Solved Quiz"
+
+#: .\constants\quiz_strings.py:42
+msgid "Sorunun Konusu"
+msgstr "The Topic of the Question"
+
+#: .\constants\quiz_strings.py:44
+msgid "Cevap Doğru Mu?"
+msgstr "Is the Answer Correct?"
+
+#: .\constants\quiz_strings.py:46
+msgid "Çözülmüş Sınav Cevabı"
+msgstr "Answer of the Solved Quiz"
+
+#: .\constants\quiz_strings.py:47
+msgid "Çözülmüş Sınav Cevapları"
+msgstr "Answers of the Solved Quiz"
+
+#: .\constants\quiz_strings.py:50
+msgid "This answer does not belong to the question you chose, please check it."
+msgstr ""
+
+#: .\constants\quiz_strings.py:51
+msgid "This question does not belong to the exam you chose, please check it."
+msgstr ""
+
+#: .\constants\quiz_strings.py:52
+msgid "To solve the book quiz, you must finish reading that book."
+msgstr ""
+
+#: .\constants\school_strings.py:6
+msgid "Okul Adı"
+msgstr "School"
+
+#: .\constants\school_strings.py:7
+msgid "Adres"
+msgstr "Address"
+
+#: .\constants\school_strings.py:8
+msgid "Web Adresi"
+msgstr "Website"
+
+#: .\constants\school_strings.py:10
+msgid "Okullar"
+msgstr "Schools"
+
+#: .\constants\school_strings.py:15
+msgid "Sınıf Adı"
+msgstr "Class Name"
+
+#: .\constants\school_strings.py:16
+msgid "Sınıf Derecesi"
+msgstr "Class Degree"
+
+#: .\constants\school_strings.py:17 .\constants\school_strings.py:21
+msgid "Sınıf"
+msgstr "Class"
+
+#: .\constants\school_strings.py:18
+msgid "Sınıflar"
+msgstr "Classes"
+
+#: .\constants\school_strings.py:22
+msgid "Öğrenci/Çocuk"
+msgstr "Student/Child"
+
+#: .\constants\school_strings.py:23
+msgid "Sınıf Öğrencisi"
+msgstr "Grade Student"
+
+#: .\constants\school_strings.py:24
+msgid "Sınıf Öğrencileri"
+msgstr "Grade Studends"
+
+#: .\quiz\models\answer_model.py:10
+msgid "Doğru Cevap"
+msgstr "Correct"
+
+#: .\quiz\models\answer_model.py:11
+msgid "Yanlış Cevap"
+msgstr "Wrong"
+
+#: .\quiz\models\quiz_model.py:10
+msgid "Aktif"
+msgstr "Active"
+
+#: .\quiz\models\quiz_model.py:11
+msgid "Aktif Değil"
+msgstr "Not Active"
