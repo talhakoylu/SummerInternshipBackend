@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-05 14:45+0300\n"
+"POT-Creation-Date: 2021-08-12 07:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,11 +30,11 @@ msgstr "Top"
 msgid "Alt"
 msgstr "Bottom"
 
-#: .\config\settings.py:131
+#: .\config\example-settings.py:132 .\config\settings.py:132
 msgid "English"
 msgstr ""
 
-#: .\config\settings.py:132
+#: .\config\example-settings.py:133 .\config\settings.py:133
 msgid "Turkish"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgid "Other"
 msgstr ""
 
 #: .\constants\account_strings.py:8 .\constants\account_strings.py:24
-#: .\constants\account_strings.py:47 .\constants\book_strings.py:59
+#: .\constants\account_strings.py:47 .\constants\book_strings.py:62
 #: .\constants\quiz_strings.py:32
 msgid "Çocuk"
 msgstr "Child"
@@ -225,137 +225,153 @@ msgstr "Created At"
 msgid "Güncellenme Tarihi"
 msgstr "Updated At"
 
-#: .\constants\book_strings.py:15 .\constants\book_strings.py:21
-#: .\constants\quiz_strings.py:10 .\constants\quiz_strings.py:33
-msgid "Başlık"
-msgstr "Title"
+#: .\constants\book_strings.py:15
+msgid "Türkçe Başlık"
+msgstr "Turkish Title"
 
-#: .\constants\book_strings.py:16 .\constants\book_strings.py:30
-msgid "Açıklama"
-msgstr "Description"
+#: .\constants\book_strings.py:16 .\constants\book_strings.py:24
+msgid "İngilizce Başlık"
+msgstr "English Title"
 
-#: .\constants\book_strings.py:17 .\constants\book_strings.py:26
+#: .\constants\book_strings.py:17
+msgid "Türkçe Açıklama"
+msgstr "Turkish Description"
+
+#: .\constants\book_strings.py:18
+msgid "İngilizce Açıklama"
+msgstr "English Description"
+
+#: .\constants\book_strings.py:19 .\constants\book_strings.py:29
 msgid "Kategori"
 msgstr "Category"
 
-#: .\constants\book_strings.py:18
+#: .\constants\book_strings.py:20
 msgid "Kategoriler"
 msgstr "Categories"
 
-#: .\constants\book_strings.py:22 .\constants\book_strings.py:27
+#: .\constants\book_strings.py:23 .\constants\quiz_strings.py:10
+#: .\constants\quiz_strings.py:33
+msgid "Başlık"
+msgstr "Title"
+
+#: .\constants\book_strings.py:25 .\constants\book_strings.py:30
 msgid "Seviye"
 msgstr "Level"
 
-#: .\constants\book_strings.py:23
+#: .\constants\book_strings.py:26
 msgid "Kitap Seviyeleri"
 msgstr "Book Levels"
 
-#: .\constants\book_strings.py:28
+#: .\constants\book_strings.py:31
 msgid "Kitap Dili"
 msgstr "Book Language"
 
-#: .\constants\book_strings.py:29 .\constants\book_strings.py:38
+#: .\constants\book_strings.py:32 .\constants\book_strings.py:41
 msgid "İsim"
 msgstr "Name"
 
-#: .\constants\book_strings.py:31 .\constants\book_strings.py:42
+#: .\constants\book_strings.py:33
+msgid "Açıklama"
+msgstr "Description"
+
+#: .\constants\book_strings.py:34 .\constants\book_strings.py:45
 msgid "Yazar"
 msgstr "Author"
 
-#: .\constants\book_strings.py:32
+#: .\constants\book_strings.py:35
 msgid "Sayfa Sayısı"
 msgstr "Number of Pages"
 
-#: .\constants\book_strings.py:33
+#: .\constants\book_strings.py:36
 msgid "Kapak Görseli"
 msgstr "Cover Image"
 
-#: .\constants\book_strings.py:34 .\constants\book_strings.py:46
-#: .\constants\book_strings.py:58 .\constants\quiz_strings.py:9
+#: .\constants\book_strings.py:37 .\constants\book_strings.py:49
+#: .\constants\book_strings.py:61 .\constants\quiz_strings.py:9
 msgid "Kitap"
 msgstr "Book"
 
-#: .\constants\book_strings.py:35
+#: .\constants\book_strings.py:38
 msgid "Kitaplar"
 msgstr "Books"
 
-#: .\constants\book_strings.py:39
+#: .\constants\book_strings.py:42
 msgid "Soyisim"
 msgstr "Surname"
 
-#: .\constants\book_strings.py:40
+#: .\constants\book_strings.py:43
 msgid "Fotoğraf"
 msgstr "Picture"
 
-#: .\constants\book_strings.py:41
+#: .\constants\book_strings.py:44
 msgid "Biyografi"
 msgstr "Biography"
 
-#: .\constants\book_strings.py:43
+#: .\constants\book_strings.py:46
 msgid "Yazarlar"
 msgstr "Authors"
 
-#: .\constants\book_strings.py:47
+#: .\constants\book_strings.py:50
 msgid "Sayfa Başlığı"
 msgstr "Page Title"
 
-#: .\constants\book_strings.py:48
+#: .\constants\book_strings.py:51
 msgid "Sayfa İçeriği"
 msgstr "Page Content"
 
-#: .\constants\book_strings.py:49
+#: .\constants\book_strings.py:52
 msgid "Sayfa Numarası"
 msgstr "Page Number"
 
-#: .\constants\book_strings.py:50
+#: .\constants\book_strings.py:53
 msgid "Görsel"
 msgstr "Image"
 
-#: .\constants\book_strings.py:51 .\constants\book_strings.py:53
+#: .\constants\book_strings.py:54 .\constants\book_strings.py:56
 msgid "Görselin Konumu"
 msgstr "Image Position"
 
-#: .\constants\book_strings.py:52
+#: .\constants\book_strings.py:55
 msgid "İçeriğin Konumu"
 msgstr "Content Position"
 
-#: .\constants\book_strings.py:54
+#: .\constants\book_strings.py:57
 msgid "Kitap Sayfası"
 msgstr "Book Page"
 
-#: .\constants\book_strings.py:55
+#: .\constants\book_strings.py:58
 msgid "Kitap Sayfaları"
 msgstr "Book Pages"
 
-#: .\constants\book_strings.py:60
+#: .\constants\book_strings.py:63
 msgid "Kitap bitirildi mi?"
 msgstr "Is Finished?"
 
-#: .\constants\book_strings.py:61
+#: .\constants\book_strings.py:64
 msgid "Hayır"
 msgstr "No"
 
-#: .\constants\book_strings.py:62
+#: .\constants\book_strings.py:65
 msgid "Evet"
 msgstr "Yes"
 
-#: .\constants\book_strings.py:63
+#: .\constants\book_strings.py:66
 msgid "Okuma Sayacı"
 msgstr "Reading Counter"
 
-#: .\constants\book_strings.py:64
+#: .\constants\book_strings.py:67
 msgid "Okuma Geçmişi"
 msgstr "Reading History"
 
-#: .\constants\book_strings.py:65
+#: .\constants\book_strings.py:68
 msgid "Okuma Geçmişleri"
 msgstr "Reading Histories"
 
-#: .\constants\book_strings.py:68
+#: .\constants\book_strings.py:71
 msgid "The person whose record you want to see must be your child."
 msgstr ""
 
-#: .\constants\book_strings.py:69
+#: .\constants\book_strings.py:72
 msgid "To see this page, you must be a parent or an instructor"
 msgstr ""
 

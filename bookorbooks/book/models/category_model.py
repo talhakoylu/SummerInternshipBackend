@@ -7,9 +7,15 @@ class Category(AbstractBookBaseModel):
     title = models.CharField(
         max_length=50,
         verbose_name=BookStrings.CategoryStrings.title_verbose_name)
+    title_english = models.CharField(
+        max_length=50,
+        verbose_name=BookStrings.CategoryStrings.english_title_verbose_name)
     description = models.CharField(
         max_length=256,
         verbose_name=BookStrings.CategoryStrings.description_verbose_name)
+    description_english = models.CharField(
+        max_length=256,
+        verbose_name=BookStrings.CategoryStrings.english_description_verbose_name)
     slug = models.SlugField(unique=True, max_length=150, editable=False)
 
     class Meta:

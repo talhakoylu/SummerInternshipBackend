@@ -21,7 +21,7 @@ class _BookLevelForCategoryBookSerializer(serializers.ModelSerializer):
     # helper serializer. It should not be imported elsewhere.
     class Meta:
         model = BookLevel
-        fields = ["id", "title"]
+        fields = ["id", "title", "title_english"]
 
 
 class _LanguageForCategoryBookSerializer(serializers.ModelSerializer):

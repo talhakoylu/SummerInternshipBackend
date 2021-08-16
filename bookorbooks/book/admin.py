@@ -18,7 +18,11 @@ class CategoryAdminForm(forms.ModelForm):
             "description": forms.Textarea(attrs={
                 'cols': 80,
                 'rows': 10
-            })
+            }),
+            "description_english": forms.Textarea(attrs={
+                'cols': 80,
+                'rows': 10
+            }),
         }
 
 
@@ -27,7 +31,7 @@ class CategoryAdmin(admin.ModelAdmin):
     form = CategoryAdminForm
     list_display = ["id", "title", "slug", "created_at", "updated_at"]
     list_display_links = ["id", "title"]
-    search_fields = ["title"]
+    search_fields = ["title", "title_english"]
 
     class Meta:
         model = Category

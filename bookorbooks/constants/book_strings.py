@@ -12,13 +12,16 @@ class BookStrings():
         updated_at_verbose_name = _("Güncellenme Tarihi")
 
     class CategoryStrings():
-        title_verbose_name = _("Başlık")
-        description_verbose_name = _("Açıklama")
+        title_verbose_name = _("Türkçe Başlık")
+        english_title_verbose_name = _("İngilizce Başlık")
+        description_verbose_name = _("Türkçe Açıklama")
+        english_description_verbose_name = _("İngilizce Açıklama")
         meta_verbose_name = _("Kategori")
         meta_verbose_name_plural = _("Kategoriler")
 
     class BookLevelStrings():
         title_verbose_name = _("Başlık")
+        english_title_verbose_name = _("İngilizce Başlık")
         meta_verbose_name = _("Seviye")
         meta_verbose_name_plural = _("Kitap Seviyeleri")
 

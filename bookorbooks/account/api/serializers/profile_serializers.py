@@ -100,3 +100,12 @@ class UserInstructorProfileSerializer(ModelSerializer):
             nested_serializer.update(nested_instance, nested_data)
         return super(UserInstructorProfileSerializer,
                      self).update(instance, validated_data)
+
+class MeSerializer(ModelSerializer):
+    """
+        A serializer to use on the frontend. This serializer is using user model data for retrieving purpose.
+    """
+    user_type_value = serializers.CharField(source = "get_user_type_display")
+    class Meta:
+        model = User
+        fields = ["id", "username", "email", "first_name", "last_name", "user_type", "user_type_value"]

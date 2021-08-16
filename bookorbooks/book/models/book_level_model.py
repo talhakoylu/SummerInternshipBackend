@@ -7,6 +7,9 @@ class BookLevel(AbstractBookBaseModel):
     title = models.CharField(
         max_length=50,
         verbose_name=BookStrings.BookLevelStrings.title_verbose_name)
+    title_english = models.CharField(
+        max_length=50,
+        verbose_name=BookStrings.BookLevelStrings.english_title_verbose_name)
 
     class Meta:
         verbose_name = BookStrings.BookLevelStrings.meta_verbose_name

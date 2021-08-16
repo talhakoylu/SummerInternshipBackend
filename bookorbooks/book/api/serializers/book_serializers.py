@@ -7,6 +7,13 @@ from book.models import Book, BookPage
 
 
 class BookSerializer(serializers.ModelSerializer):
+    category = serializers.CharField()
+    category_english = serializers.CharField(source = "category.title_english")
+    level = serializers.CharField()
+    level_english = serializers.CharField(source = "level.title_english")
+    author = serializers.CharField()
+    language = serializers.CharField()
+    language_code = serializers.CharField(source = "language.language_code")
     class Meta:
         model = Book
         fields = "__all__"
@@ -36,11 +43,16 @@ class BookDetailSerializer(serializers.ModelSerializer):
     List of book's pages included in book's detail data
     """
     book_pages = SimpleBookPageSerializer(many=True, read_only=True)
-
+    category = serializers.CharField()
+    category_english = serializers.CharField(source = "category.title_english")
+    level = serializers.CharField()
+    level_english = serializers.CharField(source = "level.title_english")
+    author = serializers.CharField()
+    language = serializers.CharField()
+    language_code = serializers.CharField(source = "language.language_code")
     class Meta:
         model = Book
         fields = "__all__"
-        depth = 1
 
 
 

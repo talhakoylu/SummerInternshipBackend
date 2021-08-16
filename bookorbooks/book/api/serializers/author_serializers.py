@@ -10,9 +10,11 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 class _BookForAuthorBooksSerializer(serializers.ModelSerializer):
     # helper serializer. It should not be imported elsewhere.
+    category = serializers.CharField()
+    category_english = serializers.CharField(source = "category.title_english")
     class Meta:
         model = Book
-        fields = ["id", "name", "slug", "cover_image", "page"]
+        fields = ["id", "name", "slug", "cover_image", "page", "category", "category_english"]
 
 
 class AuthorDetailSerializer(serializers.ModelSerializer):

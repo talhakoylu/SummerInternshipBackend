@@ -8,10 +8,13 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 class BookSerializer(ModelSerializer):
+    category = serializers.CharField()
+    category_english = serializers.CharField(source = "category.title_english")
+    level = serializers.CharField()
+    level_english = serializers.CharField(source = "level.title_english")
     author = serializers.CharField()
     language = serializers.CharField()
-    category = serializers.CharField()
-    level = serializers.CharField()
+    language_code = serializers.CharField(source = "language.language_code")
     class Meta:
         model = Book
         fields = "__all__"
