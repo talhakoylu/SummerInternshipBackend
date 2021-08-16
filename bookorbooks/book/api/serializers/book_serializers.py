@@ -38,6 +38,12 @@ class SimpleBookPageSerializer(serializers.ModelSerializer):
         ]
 
 
+class AuthorSerializer(serializers.ModelSerializer):
+    #helper serializer
+    class Meta:
+        model = Author
+        exclude = ["created_at", "updated_at"]
+
 class BookDetailSerializer(serializers.ModelSerializer):
     """
     List of book's pages included in book's detail data
@@ -47,7 +53,7 @@ class BookDetailSerializer(serializers.ModelSerializer):
     category_english = serializers.CharField(source = "category.title_english")
     level = serializers.CharField()
     level_english = serializers.CharField(source = "level.title_english")
-    author = serializers.CharField()
+    author = AuthorSerializer(many = False)
     language = serializers.CharField()
     language_code = serializers.CharField(source = "language.language_code")
     class Meta:

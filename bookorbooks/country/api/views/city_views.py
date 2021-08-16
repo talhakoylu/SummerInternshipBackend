@@ -1,21 +1,26 @@
+from django_filters.rest_framework.backends import DjangoFilterBackend
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from country.models import City
-from country.api.serializers import CitySerializer, CityDetailWithCountrySerializer
+from country.api.serializers import CitySerializer
 from django.shortcuts import get_object_or_404
-
+from rest_framework.filters import SearchFilter
 
 
 class CityListAPIView(ListAPIView):
     queryset = City.objects.all()
     serializer_class = CitySerializer
+    filter_backends = [DjangoFilterBackend, SearchFilter]
+    search_fields = ['country__name', 'country__code', 'name', 'district__name']
+    filterset_fields = ['country', 'district']
+
 
 class CityDetailAPIView(RetrieveAPIView):
     queryset = City.objects.all()
-    serializer_class = CityDetailWithCountrySerializer
+    serializer_class = CitySerializer
     
     def get_object(self):
         """
-        This overidden method returns a specific city with details.\n
+        This overridden method returns a specific city with details.\n
         It needs a special url path e.g city-detail/<country_code>/<city_code>\n
         If the searching object doesn't exists then it returns 404 error.
         """
