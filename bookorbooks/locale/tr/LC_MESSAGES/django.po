@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 07:48+0300\n"
+"POT-Creation-Date: 2021-08-13 14:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,11 +30,11 @@ msgstr ""
 msgid "Alt"
 msgstr ""
 
-#: .\config\example-settings.py:132 .\config\settings.py:132
+#: .\config\example-settings.py:131 .\config\settings.py:131
 msgid "English"
 msgstr "İngilizce"
 
-#: .\config\example-settings.py:133 .\config\settings.py:133
+#: .\config\example-settings.py:132 .\config\settings.py:132
 msgid "Turkish"
 msgstr "Türkçe"
 
@@ -100,7 +100,7 @@ msgid "Kullanıcılar"
 msgstr ""
 
 #: .\constants\account_strings.py:22 .\constants\account_strings.py:30
-#: .\constants\country_strings.py:13 .\constants\country_strings.py:15
+#: .\constants\country_strings.py:14 .\constants\country_strings.py:16
 msgid "Şehir"
 msgstr ""
 
@@ -378,6 +378,7 @@ msgstr "Bu sayfayı görebilmek için bir ebevyn veya eğitmen olmanız gerekmek
 
 #: .\constants\country_strings.py:5 .\constants\country_strings.py:7
 #: .\constants\country_strings.py:9 .\constants\country_strings.py:12
+#: .\constants\country_strings.py:22
 msgid "Ülke"
 msgstr ""
 
@@ -389,12 +390,27 @@ msgstr ""
 msgid "Ülke Kodu"
 msgstr ""
 
-#: .\constants\country_strings.py:14 .\constants\school_strings.py:5
+#: .\constants\country_strings.py:13 .\constants\country_strings.py:23
+#: .\constants\country_strings.py:25
+msgid "Bölge"
+msgstr ""
+
+#: .\constants\country_strings.py:15 .\constants\school_strings.py:5
 msgid "Şehirler"
 msgstr ""
 
-#: .\constants\country_strings.py:16
+#: .\constants\country_strings.py:17
 msgid "Şehir Kodu"
+msgstr ""
+
+#: .\constants\country_strings.py:18
+msgid ""
+"In order to add this city, the country and district information must be "
+"linked."
+msgstr "Bu şehri ekleyebilmek için bölge ve ülke birbiriyle bağlantılı olmak zorundadır."
+
+#: .\constants\country_strings.py:24
+msgid "Bölgeler"
 msgstr ""
 
 #: .\constants\general_strings.py:4

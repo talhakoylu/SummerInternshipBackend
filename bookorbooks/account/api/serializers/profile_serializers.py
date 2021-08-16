@@ -1,3 +1,4 @@
+from country.models.city_model import City
 from account.models.instructor_model import InstructorProfile
 from rest_framework import serializers
 from account.models.custom_user_model import CustomUser
@@ -8,17 +9,19 @@ from school.models import School
 
 User = get_user_model()
 
-
 class ChildProfileSerializer(ModelSerializer):
+    district = serializers.CharField(source = "city.district", read_only = True)
     class Meta:
         model = ChildProfile
-        fields = ["city", "hobbies"]
+        fields = ["city", "hobbies", "district"]
 
 
 class ParentProfileSerializer(ModelSerializer):
+    district = serializers.CharField(source = "city.district", read_only = True)
+
     class Meta:
         model = ParentProfile
-        fields = ["city", "profession"]
+        fields = ["city", "district", "profession"]
 
 
 class SchoolForInstructorSerializer(ModelSerializer):

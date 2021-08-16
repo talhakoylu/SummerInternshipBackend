@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 07:48+0300\n"
+"POT-Creation-Date: 2021-08-13 14:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,11 +30,11 @@ msgstr "Top"
 msgid "Alt"
 msgstr "Bottom"
 
-#: .\config\example-settings.py:132 .\config\settings.py:132
+#: .\config\example-settings.py:131 .\config\settings.py:131
 msgid "English"
 msgstr ""
 
-#: .\config\example-settings.py:133 .\config\settings.py:133
+#: .\config\example-settings.py:132 .\config\settings.py:132
 msgid "Turkish"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgid "Kullanıcılar"
 msgstr "Users"
 
 #: .\constants\account_strings.py:22 .\constants\account_strings.py:30
-#: .\constants\country_strings.py:13 .\constants\country_strings.py:15
+#: .\constants\country_strings.py:14 .\constants\country_strings.py:16
 msgid "Şehir"
 msgstr "City"
 
@@ -377,6 +377,7 @@ msgstr ""
 
 #: .\constants\country_strings.py:5 .\constants\country_strings.py:7
 #: .\constants\country_strings.py:9 .\constants\country_strings.py:12
+#: .\constants\country_strings.py:22
 msgid "Ülke"
 msgstr "Country"
 
@@ -388,13 +389,28 @@ msgstr "Countries"
 msgid "Ülke Kodu"
 msgstr "Country Code"
 
-#: .\constants\country_strings.py:14 .\constants\school_strings.py:5
+#: .\constants\country_strings.py:13 .\constants\country_strings.py:23
+#: .\constants\country_strings.py:25
+msgid "Bölge"
+msgstr "District"
+
+#: .\constants\country_strings.py:15 .\constants\school_strings.py:5
 msgid "Şehirler"
 msgstr "Cities"
 
-#: .\constants\country_strings.py:16
+#: .\constants\country_strings.py:17
 msgid "Şehir Kodu"
 msgstr "City Code"
+
+#: .\constants\country_strings.py:18
+msgid ""
+"In order to add this city, the country and district information must be "
+"linked."
+msgstr ""
+
+#: .\constants\country_strings.py:24
+msgid "Bölgeler"
+msgstr "Districts"
 
 #: .\constants\general_strings.py:4
 msgid "You are already logged in!"

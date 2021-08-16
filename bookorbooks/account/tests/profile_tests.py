@@ -38,6 +38,7 @@ class ChildProfileTests(APITestCase):
             "birth_date": "1999-12-11",
             "user_child": {
                 "city": self.city.id,
+                "district": None,
                 "hobbies": "example hobbies"
             }
         }
@@ -108,6 +109,7 @@ class ParentProfileTests(APITestCase):
             "birth_date": "1999-12-11",
             "user_parent": {
                 "city": self.city.id,
+                "district": None,
                 "profession": "example profession"
             }
         }

@@ -1,7 +1,7 @@
 from account.api.views.child_list_views import ChildListByUserAPIView, ChildListItemDestroyAPIView
 from django.urls.conf import include
 from account.api.views.account_views import PasswordUpdateAPIView
-from account.api.views.profile_views import ChildProfileUpdateAPIView, InstructorProfileUpdateAPIView, ParentProfileUpdateAPIView
+from account.api.views.profile_views import ChildProfileUpdateAPIView, InstructorProfileUpdateAPIView, MeAPIView, ParentProfileUpdateAPIView
 from django.urls import path
 from account.api.views import CreateUserAPIView, ChildListAPIView, ChildListCreateAPIView
 
@@ -17,5 +17,6 @@ urlpatterns = [
     path("child-profile-update", ChildProfileUpdateAPIView.as_view(), name="child_profile_update"),
     path("parent-profile-update", ParentProfileUpdateAPIView.as_view(), name="parent_profile_update"),
     path("instructor-profile-update", InstructorProfileUpdateAPIView.as_view(), name="instructor_profile_update"),
+    path("me", MeAPIView.as_view(), name = "me")
     
 ]

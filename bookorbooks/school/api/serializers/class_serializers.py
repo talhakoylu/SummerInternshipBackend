@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class SchoolSeriliazer(ModelSerializer):
+class SchoolSerializer(ModelSerializer):
     class Meta:
         model = School
         fields = ["id", "name", "address", "website"]
@@ -34,7 +34,7 @@ class ClassCreateSerializer(ModelSerializer):
         fields = "__all__"
 
 class ClassSerializer(ModelSerializer):
-    school = SchoolSeriliazer()
+    school = SchoolSerializer()
     instructor = InstructorSerializer()
 
     class Meta:

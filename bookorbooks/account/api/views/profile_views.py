@@ -67,7 +67,6 @@ class InstructorProfileUpdateAPIView(RetrieveUpdateAPIView):
     def perform_update(self, serializer):
         serializer.save(user=self.request.user)
 
-
 class MeAPIView(RetrieveAPIView):
     """
         Provides an api for that get the general data of requester user.

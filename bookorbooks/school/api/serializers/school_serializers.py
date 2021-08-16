@@ -26,10 +26,11 @@ class CountryForCitySerializer(ModelSerializer):
 
 class CityForSchoolSerializer(ModelSerializer):
     country = CountryForCitySerializer()
+    district = serializers.CharField()
 
     class Meta:
         model = City
-        fields = ["id", "name", "code", "country"]
+        fields = ["id", "name", "code", "country", "district"]
 
 
 class SchoolListSerializer(ModelSerializer):
