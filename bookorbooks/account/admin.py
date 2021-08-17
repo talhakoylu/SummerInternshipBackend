@@ -43,7 +43,7 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     add_fieldsets = ((None, {
         'fields': (('first_name', 'last_name'), ('username', 'email'),
-                   ('password1', 'password2'), ('gender', 'user_type')),
+                   ('password1', 'password2'), ('gender', 'user_type', 'identity_number')),
     }), )
     form = CustomUserChangeForm
     model = CustomUser
