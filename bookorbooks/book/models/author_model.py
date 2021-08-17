@@ -50,7 +50,7 @@ class Author(AbstractBookBaseModel):
             self.slug = self.get_slug()
         else:
             origin_obj = Author.objects.get(pk=self.pk)
-            origin_full_name = self.get_full_name(origin_obj)
+            origin_full_name = "{} {}".format(origin_obj.first_name, origin_obj.last_name)
             if origin_full_name != self.get_full_name():
                 self.slug = self.get_slug()
         return super(Author, self).save(*args, **kwargs)
