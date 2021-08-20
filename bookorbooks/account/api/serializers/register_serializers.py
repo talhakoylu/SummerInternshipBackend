@@ -32,7 +32,7 @@ class RegisterSerializer(ModelSerializer):
                 AccountStrings.RegisterSerializerStrings.gender_error)
 
     def identity_number_validation(self, value):
-        if not value.isdecimal() or len(value) != 11:
+        if (not value.isdecimal()) or len(value) > 11:
             raise serializers.ValidationError(
                 AccountStrings.RegisterSerializerStrings.identity_number_error)
 
