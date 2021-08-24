@@ -21,6 +21,7 @@ class InstructorProfile(models.Model):
     branch = models.CharField(
         max_length=50,
         verbose_name=AccountStrings.InstructorProfileStrings.branch_verbose_name)
+    principal = models.BooleanField(default=False, verbose_name=AccountStrings.InstructorProfileStrings.principal_verbose_name)
 
     class Meta:
         verbose_name = AccountStrings.InstructorProfileStrings.meta_verbose_name

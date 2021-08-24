@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from constants.school_strings import SchoolStrings
 from django.db import models
 from school.models.abstract_base_model import AbstractSchoolBaseModel
@@ -26,3 +27,10 @@ class Class(AbstractSchoolBaseModel):
 
     def __str__(self):
         return f"{self.school.name} - {self.name} - Grade: {self.grade}"
+
+    def clean(self) -> None:
+        """
+        This method checks whether the teacher trying to be assigned to the class is working in that school.
+        """
+        if self.instructor.school != self.school:
+            raise ValidationError(SchoolStrings.ClassStrings.instructor_not_working_at_this_school_error)

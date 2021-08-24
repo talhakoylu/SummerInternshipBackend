@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-23 23:29+0300\n"
+"POT-Creation-Date: 2021-08-24 09:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,13 +51,13 @@ msgid "Other"
 msgstr "Diğer"
 
 #: .\constants\account_strings.py:8 .\constants\account_strings.py:24
-#: .\constants\account_strings.py:47 .\constants\book_strings.py:64
+#: .\constants\account_strings.py:48 .\constants\book_strings.py:64
 #: .\constants\quiz_strings.py:32
 msgid "Çocuk"
 msgstr "Çocuk"
 
 #: .\constants\account_strings.py:9 .\constants\account_strings.py:32
-#: .\constants\account_strings.py:46
+#: .\constants\account_strings.py:47
 msgid "Ebeveyn"
 msgstr ""
 
@@ -151,15 +151,19 @@ msgid ""
 "ayarlarından statüsünü eğitmen yapın!"
 msgstr ""
 
-#: .\constants\account_strings.py:48
-msgid "Ebeveyn ve Çocuk Kaydı"
+#: .\constants\account_strings.py:44
+msgid "Müdür"
 msgstr ""
 
 #: .\constants\account_strings.py:49
+msgid "Ebeveyn ve Çocuk Kaydı"
+msgstr ""
+
+#: .\constants\account_strings.py:50
 msgid "Ebeveyn ve Çocuk Kayıtları"
 msgstr ""
 
-#: .\constants\account_strings.py:52
+#: .\constants\account_strings.py:53
 msgid ""
 "You cannot pass data other than: 1- default, 2- child, 3- parent, 4- "
 "instructor"
@@ -167,29 +171,29 @@ msgstr ""
 "1- default, 2- çocuk, 3- ebeveyn, 4- eğitmen değerleri dışında bir değer "
 "gönderemezsiniz."
 
-#: .\constants\account_strings.py:53
+#: .\constants\account_strings.py:54
 msgid "You cannot pass data other than: 1- male, 2- female, 3- other"
 msgstr ""
 "1- erkek, 2- kadın, 3- diğer değerlerinden farklı bir değer gönderemezsiniz."
 
-#: .\constants\account_strings.py:54
+#: .\constants\account_strings.py:55
 msgid "Identity number can only consist of numbers and cannot be long than 11."
 msgstr ""
 "Kimlik numarası sadece sayılardan oluşmalı ve 11 haneden uzun olmamalı."
 
-#: .\constants\account_strings.py:57
+#: .\constants\account_strings.py:58
 msgid "To do this, you must be a parent."
 msgstr "Bu işlemi yapabilmek için bir ebevyn olmanız gerekmektedir."
 
-#: .\constants\account_strings.py:58
+#: .\constants\account_strings.py:59
 msgid "To do this, you must be a child."
 msgstr "Bu işlemi yapabilmek için bir çocuk olmanız gerekmektedir."
 
-#: .\constants\account_strings.py:59
+#: .\constants\account_strings.py:60
 msgid "To do this, you must be a instructor."
 msgstr "Bu işlemi yapabilmek için bir eğitmen olmanız gerekmektedir."
 
-#: .\constants\account_strings.py:60
+#: .\constants\account_strings.py:61
 msgid ""
 "To do this, you have to choose the school you work at from your profile "
 "page. If the problem persists, please contact the administrator."
@@ -198,11 +202,11 @@ msgstr ""
 "gerekmektedir. Eğer bir problemle karşılaşırsanız yönetici ile iletişime "
 "geçiniz."
 
-#: .\constants\account_strings.py:61
+#: .\constants\account_strings.py:62
 msgid "To do this, you must be the owner of this class."
 msgstr "Bu işlemi yapabilmek için bu sınıfın eğitmeni siz olmalısınız."
 
-#: .\constants\account_strings.py:62
+#: .\constants\account_strings.py:63
 msgid "To do this, you must be the parent of this child."
 msgstr "Bu işlemi yapabilmek için bu çocuğun ebeveyni siz olmalısınız."
 
@@ -352,7 +356,10 @@ msgstr "Metin Görselin İçerisinde Mi Konumlansın?"
 msgid ""
 "If you choose this option, the text will be positioned inside the image. "
 "Otherwise, the center option of text position will be disabled in frontend."
-msgstr "Bu seçeneği seçerseniz yazı görselin içinde konumlandırılır. Eğer seçmezseniz, içeriğin konumunda bulunan orta seçeneği frontend tarafında devredışı kabul edilir."
+msgstr ""
+"Bu seçeneği seçerseniz yazı görselin içinde konumlandırılır. Eğer "
+"seçmezseniz, içeriğin konumunda bulunan orta seçeneği frontend tarafında "
+"devredışı kabul edilir."
 
 #: .\constants\book_strings.py:65
 msgid "Kitap bitirildi mi?"
@@ -549,7 +556,7 @@ msgstr ""
 msgid "Sınıf Derecesi"
 msgstr ""
 
-#: .\constants\school_strings.py:17 .\constants\school_strings.py:21
+#: .\constants\school_strings.py:17 .\constants\school_strings.py:22
 msgid "Sınıf"
 msgstr ""
 
@@ -557,15 +564,21 @@ msgstr ""
 msgid "Sınıflar"
 msgstr ""
 
-#: .\constants\school_strings.py:22
-msgid "Öğrenci/Çocuk"
+#: .\constants\school_strings.py:19
+msgid ""
+"You cannot assign this instructor to a class from this school. The "
+"instructor does not work in this school."
 msgstr ""
 
 #: .\constants\school_strings.py:23
-msgid "Sınıf Öğrencisi"
+msgid "Öğrenci/Çocuk"
 msgstr ""
 
 #: .\constants\school_strings.py:24
+msgid "Sınıf Öğrencisi"
+msgstr ""
+
+#: .\constants\school_strings.py:25
 msgid "Sınıf Öğrencileri"
 msgstr ""
 
