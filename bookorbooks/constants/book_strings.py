@@ -68,6 +68,7 @@ class BookStrings():
         counter_verbose_name = _("Okuma Sayacı")
         meta_verbose_name = _("Okuma Geçmişi")
         meta_verbose_name_plural = _("Okuma Geçmişleri")
+        exists_error = _("Bu kayıt daha önce eklendiği için yenisini ekleyemezsiniz, bunun yerine varolan kaydı düzenlemeyi deneyiniz.")
 
     class PermissionStrings():
         is_own_child_permission = _("The person whose record you want to see must be your child.")

@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from book.models.abstract_book_base_model import AbstractBookBaseModel
 from django.db import models
 from constants.book_strings import BookStrings
@@ -24,7 +25,7 @@ class ReadingHistory(AbstractBookBaseModel):
     )
     counter = models.PositiveIntegerField(
         verbose_name=BookStrings.ReadingHistoryStrings.counter_verbose_name,
-        editable=False, default=0)
+        default=0)
 
     class Meta:
         verbose_name = BookStrings.ReadingHistoryStrings.meta_verbose_name
@@ -32,3 +33,10 @@ class ReadingHistory(AbstractBookBaseModel):
 
     def __str__(self):
         return f"{self.child.user.first_name} {self.child.user.last_name} - \"{self.book.name}\" "
+
+    def clean(self) -> None:
+        result = ReadingHistory.objects.filter(child=self.child,
+                                               book=self.book)
+        if not self.pk and result.exists():
+            raise ValidationError(
+                BookStrings.ReadingHistoryStrings.exists_error)

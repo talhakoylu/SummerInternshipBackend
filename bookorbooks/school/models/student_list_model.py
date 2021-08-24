@@ -26,5 +26,5 @@ class StudentList(AbstractSchoolBaseModel):
 
     def clean(self) -> None:
         result = StudentList.objects.filter(school_class = self.school_class, child = self.child)
-        if result.exists():
+        if not self.pk and result.exists():
             raise ValidationError(SchoolStrings.StudentListStrings.child_already_added_to_this_class_error)

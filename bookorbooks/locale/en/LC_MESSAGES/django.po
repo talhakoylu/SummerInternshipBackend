@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 10:08+0300\n"
+"POT-Creation-Date: 2021-08-24 14:32+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -381,11 +381,17 @@ msgstr "Reading History"
 msgid "Okuma Geçmişleri"
 msgstr "Reading Histories"
 
-#: .\constants\book_strings.py:73
+#: .\constants\book_strings.py:71
+msgid ""
+"Bu kayıt daha önce eklendiği için yenisini ekleyemezsiniz, bunun yerine "
+"varolan kaydı düzenlemeyi deneyiniz."
+msgstr "Because this record has been added before, you cannot add a new one, try editing the existing record instead."
+
+#: .\constants\book_strings.py:74
 msgid "The person whose record you want to see must be your child."
 msgstr ""
 
-#: .\constants\book_strings.py:74
+#: .\constants\book_strings.py:75
 msgid "To see this page, you must be a parent or an instructor"
 msgstr ""
 
