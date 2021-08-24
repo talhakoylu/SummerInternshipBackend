@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from constants.school_strings import SchoolStrings
 from django.db import models
 from school.models.abstract_base_model import AbstractSchoolBaseModel
@@ -22,3 +23,8 @@ class StudentList(AbstractSchoolBaseModel):
 
     def __str__(self):
         return f"{self.school_class.name} : {self.child.user.first_name} {self.child.user.last_name}"
+
+    def clean(self) -> None:
+        result = StudentList.objects.filter(school_class = self.school_class, child = self.child)
+        if result.exists():
+            raise ValidationError(SchoolStrings.StudentListStrings.child_already_added_to_this_class_error)

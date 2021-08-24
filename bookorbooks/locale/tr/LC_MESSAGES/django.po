@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 09:46+0300\n"
+"POT-Creation-Date: 2021-08-24 10:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -568,7 +568,7 @@ msgstr ""
 msgid ""
 "You cannot assign this instructor to a class from this school. The "
 "instructor does not work in this school."
-msgstr ""
+msgstr "Bu öğretmeni bu sınıfa atayamazsınız. Sebebi, bu öğretmen başka bir okulda görev almakta."
 
 #: .\constants\school_strings.py:23
 msgid "Öğrenci/Çocuk"
@@ -581,6 +581,12 @@ msgstr ""
 #: .\constants\school_strings.py:25
 msgid "Sınıf Öğrencileri"
 msgstr ""
+
+#: .\constants\school_strings.py:26
+msgid ""
+"Because this student was previously added to this class, you cannot add them "
+"again."
+msgstr "Bu öğrenci daha önce bu sınıfa kayıt edilmiş, bu nedenle tekrar kayıt edilemez."
 
 #: .\quiz\models\answer_model.py:10
 msgid "Doğru Cevap"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 09:46+0300\n"
+"POT-Creation-Date: 2021-08-24 10:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -575,6 +575,12 @@ msgstr "Grade Student"
 #: .\constants\school_strings.py:25
 msgid "Sınıf Öğrencileri"
 msgstr "Grade Studends"
+
+#: .\constants\school_strings.py:26
+msgid ""
+"Because this student was previously added to this class, you cannot add them "
+"again."
+msgstr ""
 
 #: .\quiz\models\answer_model.py:10
 msgid "Doğru Cevap"
