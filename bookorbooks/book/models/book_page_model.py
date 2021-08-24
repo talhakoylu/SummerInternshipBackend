@@ -8,11 +8,10 @@ from django.utils.translation import ugettext_lazy as _
 
 class BookPage(AbstractBookBaseModel):
     POSITION_CHOICES = (
-        (0, _("Orta")),
-        (1, _("Üst")),
+        (1, _("Orta")),
+        (0, _("Üst")),
         (2, _("Alt")),
     )
-
 
     book = models.ForeignKey(
         "book.Book",
@@ -23,28 +22,28 @@ class BookPage(AbstractBookBaseModel):
     content = models.TextField(
         verbose_name=BookStrings.BookPageStrings.content_verbose_name)
     page_number = models.PositiveIntegerField(
-        verbose_name=BookStrings.BookPageStrings.page_number_verbose_name,
-        null=True,
-        blank=True)
+        verbose_name=BookStrings.BookPageStrings.page_number_verbose_name)
     image = models.ImageField(
         upload_to="books/book-pages/%Y/%m/%d/",
         blank=True,
         null=True,
         verbose_name=BookStrings.BookPageStrings.image_verbose_name)
-    image_position = models.SmallIntegerField(
-        verbose_name=BookStrings.BookPageStrings.image_position_verbose_name,
-        null=True,
-        blank=True,
-        choices=POSITION_CHOICES,
-        default= 0,
-        validators=[MinValueValidator(0),
-                    MaxValueValidator(2)])
+    # image_position = models.SmallIntegerField(
+    #     verbose_name=BookStrings.BookPageStrings.image_position_verbose_name,
+    #     null=True,
+    #     blank=True,
+    #     choices=POSITION_CHOICES,
+    #     default= 0,
+    #     validators=[MinValueValidator(0),
+    #                 MaxValueValidator(2)])
+    text_inside_image = models.BooleanField(
+        default=False,
+        verbose_name=BookStrings.BookPageStrings.text_inside_image,
+        help_text=BookStrings.BookPageStrings.text_inside_image_help)
     content_position = models.SmallIntegerField(
         verbose_name=BookStrings.BookPageStrings.content_position_verbose_name,
-        null=True,
-        blank=True,
         choices=POSITION_CHOICES,
-        default= 0,
+        default=0,
         validators=[MinValueValidator(0),
                     MaxValueValidator(2)])
 

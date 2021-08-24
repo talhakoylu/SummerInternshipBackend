@@ -56,6 +56,8 @@ class BookStrings():
         image_position_verbose_name = _("Görselin Konumu")
         meta_verbose_name = _("Kitap Sayfası")
         meta_verbose_name_plural = _("Kitap Sayfaları")
+        text_inside_image = _("Is the Text inside the Image?")
+        text_inside_image_help = _("If you choose this option, the text will be positioned inside the image. Otherwise, the center option of text position will be disabled in frontend.")
 
     class ReadingHistoryStrings():
         book_verbose_name = _("Kitap")

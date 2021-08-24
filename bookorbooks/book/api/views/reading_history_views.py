@@ -61,8 +61,8 @@ class AddReadingHistoryAPIView(CreateAPIView):
         is_finished = serializer.validated_data.get('is_finished', )
         child = self.request.user.user_child
         obj_lst = ReadingHistory.objects.filter(book=book.pk, child=child)
-        counter = obj_lst[0].counter
         if obj_lst:
+            counter = obj_lst[0].counter
             if is_finished == False:
                 return obj_lst.update(is_finished=is_finished, updated_at=datetime.now())
             counter += 1

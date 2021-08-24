@@ -33,7 +33,7 @@ class SimpleBookPageSerializer(serializers.ModelSerializer):
     class Meta:
         model = BookPage
         fields = [
-            "id", "title", "content", "page_number", "image", "image_position",
+            "id", "title", "content", "page_number", "image", "text_inside_image",
             "content_position"
         ]
 
@@ -59,8 +59,3 @@ class BookDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
         fields = "__all__"
-
-
-
-
-

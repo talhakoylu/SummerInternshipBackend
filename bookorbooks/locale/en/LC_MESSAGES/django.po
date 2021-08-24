@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-13 14:04+0300\n"
+"POT-Creation-Date: 2021-08-23 23:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,11 +30,11 @@ msgstr "Top"
 msgid "Alt"
 msgstr "Bottom"
 
-#: .\config\example-settings.py:131 .\config\settings.py:131
+#: .\config\example-settings.py:135 .\config\settings.py:135
 msgid "English"
 msgstr ""
 
-#: .\config\example-settings.py:132 .\config\settings.py:132
+#: .\config\example-settings.py:136 .\config\settings.py:136
 msgid "Turkish"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgid "Other"
 msgstr ""
 
 #: .\constants\account_strings.py:8 .\constants\account_strings.py:24
-#: .\constants\account_strings.py:47 .\constants\book_strings.py:62
+#: .\constants\account_strings.py:47 .\constants\book_strings.py:64
 #: .\constants\quiz_strings.py:32
 msgid "Çocuk"
 msgstr "Child"
@@ -287,7 +287,7 @@ msgid "Kapak Görseli"
 msgstr "Cover Image"
 
 #: .\constants\book_strings.py:37 .\constants\book_strings.py:49
-#: .\constants\book_strings.py:61 .\constants\quiz_strings.py:9
+#: .\constants\book_strings.py:63 .\constants\quiz_strings.py:9
 msgid "Kitap"
 msgstr "Book"
 
@@ -343,35 +343,45 @@ msgstr "Book Page"
 msgid "Kitap Sayfaları"
 msgstr "Book Pages"
 
-#: .\constants\book_strings.py:63
+#: .\constants\book_strings.py:59
+msgid "Is the Text inside the Image?"
+msgstr ""
+
+#: .\constants\book_strings.py:60
+msgid ""
+"If you choose this option, the text will be positioned inside the image. "
+"Otherwise, the center option of text position will be disabled in frontend."
+msgstr ""
+
+#: .\constants\book_strings.py:65
 msgid "Kitap bitirildi mi?"
 msgstr "Is Finished?"
 
-#: .\constants\book_strings.py:64
+#: .\constants\book_strings.py:66
 msgid "Hayır"
 msgstr "No"
 
-#: .\constants\book_strings.py:65
+#: .\constants\book_strings.py:67
 msgid "Evet"
 msgstr "Yes"
 
-#: .\constants\book_strings.py:66
+#: .\constants\book_strings.py:68
 msgid "Okuma Sayacı"
 msgstr "Reading Counter"
 
-#: .\constants\book_strings.py:67
+#: .\constants\book_strings.py:69
 msgid "Okuma Geçmişi"
 msgstr "Reading History"
 
-#: .\constants\book_strings.py:68
+#: .\constants\book_strings.py:70
 msgid "Okuma Geçmişleri"
 msgstr "Reading Histories"
 
-#: .\constants\book_strings.py:71
+#: .\constants\book_strings.py:73
 msgid "The person whose record you want to see must be your child."
 msgstr ""
 
-#: .\constants\book_strings.py:72
+#: .\constants\book_strings.py:74
 msgid "To see this page, you must be a parent or an instructor"
 msgstr ""
 
