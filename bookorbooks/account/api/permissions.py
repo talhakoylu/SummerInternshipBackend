@@ -36,6 +36,17 @@ class IsInstructor(BasePermission):
         return True
     message = AccountStrings.PermissionStrings.is_instructor_message
 
+
+class IsPrincipalInstructor(BasePermission):
+    """
+        Checks if the user is a principal instructor.
+    """
+    def has_permission(self, request, view):
+        if request.user.user_instructor.principal:
+            return True
+        return False
+    message = "müdür değil"
+
 class IsInstructorHasSchool(BasePermission):
     """
         Checks whether the user has school information.

@@ -13,7 +13,7 @@ class BookListAPIView(ListAPIView):
     serializer_class = BookSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
     search_fields = ["name", "description"]
-    filterset_fields = ['category', 'level', 'language']
+    filterset_fields = ['category', 'level', 'language', 'author']
 
 
 class BookDetailAPIView(RetrieveAPIView):

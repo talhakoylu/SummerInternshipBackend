@@ -41,6 +41,7 @@ class AccountStrings():
         meta_verbose_name = _("Eğitmen")
         meta_verbose_name_plural = _("Eğitmenler")
         user_type_error = _("Kullanıcı bir eğitmen olarak belirtilmemiş, ekleyebilmek için önce hesap ayarlarından statüsünü eğitmen yapın!")
+        principal_verbose_name = _("Müdür")
 
     class ChildListString():
         parent_verbose_name = _("Ebeveyn")

@@ -24,6 +24,7 @@ class Class(AbstractSchoolBaseModel):
     class Meta:
         verbose_name = SchoolStrings.ClassStrings.meta_verbose_name
         verbose_name_plural = SchoolStrings.ClassStrings.meta_verbose_name_plural
+        ordering = ["name", "grade"]
 
     def __str__(self):
         return f"{self.school.name} - {self.name} - Grade: {self.grade}"
