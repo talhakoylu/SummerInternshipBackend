@@ -1,3 +1,4 @@
+from account.api.permissions import IsChild
 from quiz.models.question_model import Question
 from django.shortcuts import get_list_or_404
 from quiz.models.quiz_model import Quiz
@@ -74,7 +75,7 @@ class GetLastEnabledQuizByBookIdAPIView(RetrieveAPIView):
         Returns a specific quiz by book id.
     """
     serializer_class = QuestionWithQuizSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, IsChild]
     queryset = Quiz.objects.all()
 
     def get_object(self):

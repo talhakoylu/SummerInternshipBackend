@@ -6,6 +6,7 @@ class BookStrings():
         meta_verbose_name_plural = _("Diller")
         language_name_verbose_name = _("Dil")
         language_code_verbose_name = _("Dil Kodu")
+        language_code_help_text = _("Dil Kodu'nu <a href='http://www.lingoes.net/en/translator/langcode.htm'><strong>ISO Dil Kodları</strong></a> sayfasındaki kodlara uygun olarak giriniz. Bu kitap dinlerken okuyucunun tercüme dilini etkiliyor.")
 
     class AbstractBaseModelStrings():
         created_at_verbose_name = _("Oluşturulma Tarihi")

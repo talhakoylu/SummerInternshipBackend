@@ -48,7 +48,7 @@ class BookDetailSerializer(serializers.ModelSerializer):
     """
     List of book's pages included in book's detail data
     """
-    book_pages = SimpleBookPageSerializer(many=True, read_only=True)
+    # book_pages = SimpleBookPageSerializer(many=True, read_only=True)
     category = serializers.CharField()
     category_english = serializers.CharField(source = "category.title_english")
     level = serializers.CharField()

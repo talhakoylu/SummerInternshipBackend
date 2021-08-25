@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 14:32+0300\n"
+"POT-Creation-Date: 2021-08-25 15:01+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "Other"
 msgstr "Diğer"
 
 #: .\constants\account_strings.py:8 .\constants\account_strings.py:24
-#: .\constants\account_strings.py:48 .\constants\book_strings.py:64
+#: .\constants\account_strings.py:48 .\constants\book_strings.py:65
 #: .\constants\quiz_strings.py:32
 msgid "Çocuk"
 msgstr "Çocuk"
@@ -222,137 +222,144 @@ msgstr ""
 msgid "Dil Kodu"
 msgstr ""
 
-#: .\constants\book_strings.py:11 .\constants\quiz_strings.py:5
+#: .\constants\book_strings.py:9
+msgid ""
+"Dil Kodu'nu <a href='http://www.lingoes.net/en/translator/langcode."
+"htm'><strong>ISO Dil Kodları</strong></a> sayfasındaki kodlara uygun olarak "
+"giriniz. Bu kitap dinlerken okuyucunun tercüme dilini etkiliyor."
+msgstr ""
+
+#: .\constants\book_strings.py:12 .\constants\quiz_strings.py:5
 msgid "Oluşturulma Tarihi"
 msgstr ""
 
-#: .\constants\book_strings.py:12 .\constants\quiz_strings.py:6
+#: .\constants\book_strings.py:13 .\constants\quiz_strings.py:6
 msgid "Güncellenme Tarihi"
 msgstr ""
 
-#: .\constants\book_strings.py:15
+#: .\constants\book_strings.py:16
 msgid "Türkçe Başlık"
 msgstr ""
 
-#: .\constants\book_strings.py:16 .\constants\book_strings.py:24
+#: .\constants\book_strings.py:17 .\constants\book_strings.py:25
 msgid "İngilizce Başlık"
 msgstr ""
 
-#: .\constants\book_strings.py:17
+#: .\constants\book_strings.py:18
 msgid "Türkçe Açıklama"
 msgstr ""
 
-#: .\constants\book_strings.py:18
+#: .\constants\book_strings.py:19
 msgid "İngilizce Açıklama"
 msgstr ""
 
-#: .\constants\book_strings.py:19 .\constants\book_strings.py:29
+#: .\constants\book_strings.py:20 .\constants\book_strings.py:30
 msgid "Kategori"
 msgstr ""
 
-#: .\constants\book_strings.py:20
+#: .\constants\book_strings.py:21
 msgid "Kategoriler"
 msgstr ""
 
-#: .\constants\book_strings.py:23 .\constants\quiz_strings.py:10
+#: .\constants\book_strings.py:24 .\constants\quiz_strings.py:10
 #: .\constants\quiz_strings.py:33
 msgid "Başlık"
 msgstr ""
 
-#: .\constants\book_strings.py:25 .\constants\book_strings.py:30
+#: .\constants\book_strings.py:26 .\constants\book_strings.py:31
 msgid "Seviye"
 msgstr ""
 
-#: .\constants\book_strings.py:26
+#: .\constants\book_strings.py:27
 msgid "Kitap Seviyeleri"
 msgstr ""
 
-#: .\constants\book_strings.py:31
+#: .\constants\book_strings.py:32
 msgid "Kitap Dili"
 msgstr ""
 
-#: .\constants\book_strings.py:32 .\constants\book_strings.py:41
+#: .\constants\book_strings.py:33 .\constants\book_strings.py:42
 msgid "İsim"
 msgstr ""
 
-#: .\constants\book_strings.py:33
+#: .\constants\book_strings.py:34
 msgid "Açıklama"
 msgstr ""
 
-#: .\constants\book_strings.py:34 .\constants\book_strings.py:45
+#: .\constants\book_strings.py:35 .\constants\book_strings.py:46
 msgid "Yazar"
 msgstr ""
 
-#: .\constants\book_strings.py:35
+#: .\constants\book_strings.py:36
 msgid "Sayfa Sayısı"
 msgstr ""
 
-#: .\constants\book_strings.py:36
+#: .\constants\book_strings.py:37
 msgid "Kapak Görseli"
 msgstr ""
 
-#: .\constants\book_strings.py:37 .\constants\book_strings.py:49
-#: .\constants\book_strings.py:63 .\constants\quiz_strings.py:9
+#: .\constants\book_strings.py:38 .\constants\book_strings.py:50
+#: .\constants\book_strings.py:64 .\constants\quiz_strings.py:9
 msgid "Kitap"
 msgstr ""
 
-#: .\constants\book_strings.py:38
+#: .\constants\book_strings.py:39
 msgid "Kitaplar"
 msgstr ""
 
-#: .\constants\book_strings.py:42
+#: .\constants\book_strings.py:43
 msgid "Soyisim"
 msgstr ""
 
-#: .\constants\book_strings.py:43
+#: .\constants\book_strings.py:44
 msgid "Fotoğraf"
 msgstr ""
 
-#: .\constants\book_strings.py:44
+#: .\constants\book_strings.py:45
 msgid "Biyografi"
 msgstr ""
 
-#: .\constants\book_strings.py:46
+#: .\constants\book_strings.py:47
 msgid "Yazarlar"
 msgstr ""
 
-#: .\constants\book_strings.py:50
+#: .\constants\book_strings.py:51
 msgid "Sayfa Başlığı"
 msgstr ""
 
-#: .\constants\book_strings.py:51
+#: .\constants\book_strings.py:52
 msgid "Sayfa İçeriği"
 msgstr ""
 
-#: .\constants\book_strings.py:52
+#: .\constants\book_strings.py:53
 msgid "Sayfa Numarası"
 msgstr ""
 
-#: .\constants\book_strings.py:53
+#: .\constants\book_strings.py:54
 msgid "Görsel"
 msgstr ""
 
-#: .\constants\book_strings.py:54 .\constants\book_strings.py:56
+#: .\constants\book_strings.py:55 .\constants\book_strings.py:57
 msgid "Görselin Konumu"
 msgstr ""
 
-#: .\constants\book_strings.py:55
+#: .\constants\book_strings.py:56
 msgid "İçeriğin Konumu"
 msgstr ""
 
-#: .\constants\book_strings.py:57
+#: .\constants\book_strings.py:58
 msgid "Kitap Sayfası"
 msgstr ""
 
-#: .\constants\book_strings.py:58
+#: .\constants\book_strings.py:59
 msgid "Kitap Sayfaları"
 msgstr ""
 
-#: .\constants\book_strings.py:59
+#: .\constants\book_strings.py:60
 msgid "Is the Text inside the Image?"
 msgstr "Metin Görselin İçerisinde Mi Konumlansın?"
 
-#: .\constants\book_strings.py:60
+#: .\constants\book_strings.py:61
 msgid ""
 "If you choose this option, the text will be positioned inside the image. "
 "Otherwise, the center option of text position will be disabled in frontend."
@@ -361,41 +368,41 @@ msgstr ""
 "seçmezseniz, içeriğin konumunda bulunan orta seçeneği frontend tarafında "
 "devredışı kabul edilir."
 
-#: .\constants\book_strings.py:65
+#: .\constants\book_strings.py:66
 msgid "Kitap bitirildi mi?"
 msgstr ""
 
-#: .\constants\book_strings.py:66
+#: .\constants\book_strings.py:67
 msgid "Hayır"
 msgstr ""
 
-#: .\constants\book_strings.py:67
+#: .\constants\book_strings.py:68
 msgid "Evet"
 msgstr ""
 
-#: .\constants\book_strings.py:68
+#: .\constants\book_strings.py:69
 msgid "Okuma Sayacı"
 msgstr ""
 
-#: .\constants\book_strings.py:69
+#: .\constants\book_strings.py:70
 msgid "Okuma Geçmişi"
 msgstr ""
 
-#: .\constants\book_strings.py:70
+#: .\constants\book_strings.py:71
 msgid "Okuma Geçmişleri"
 msgstr ""
 
-#: .\constants\book_strings.py:71
+#: .\constants\book_strings.py:72
 msgid ""
 "Bu kayıt daha önce eklendiği için yenisini ekleyemezsiniz, bunun yerine "
 "varolan kaydı düzenlemeyi deneyiniz."
 msgstr ""
 
-#: .\constants\book_strings.py:74
+#: .\constants\book_strings.py:75
 msgid "The person whose record you want to see must be your child."
 msgstr "Kaydını görmek istediğiniz kişi sizin çocuğunuz olmak zorundadır."
 
-#: .\constants\book_strings.py:75
+#: .\constants\book_strings.py:76
 msgid "To see this page, you must be a parent or an instructor"
 msgstr "Bu sayfayı görebilmek için bir ebevyn veya eğitmen olmanız gerekmekte."
 

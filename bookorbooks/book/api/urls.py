@@ -1,3 +1,4 @@
+from book.api.views.book_page_views import BookPagesByBookIdAPIView
 from book.api.views.reading_history_views import AddReadingHistoryAPIView, ReadingHistoryByChildAPIView, ReadingHistoryByChildIdAPIView, ReadingHistoryListAllAPIView
 from book.api.views import AuthorDetailAPIView, AuthorListAPIView, BookDetailAPIView, BookLanguageListAPIView, BookLevelListAPIView, BookListAPIView, BooksPageListAPIView, CategoryListAPIView, CategoryDetailAPIView, CategoryDetailWithBooksAPIView
 from django.urls import path
@@ -15,6 +16,7 @@ urlpatterns = [
     path("book-list", BookListAPIView.as_view(), name="book-list"),
     path("book-detail/<slug>", BookDetailAPIView.as_view(), name="book-detail"),
     path("books-page-list", BooksPageListAPIView.as_view(), name="books-page-list"),
+    path("book-pages-by-book-id/<book_id>", BookPagesByBookIdAPIView.as_view(), name="book_page_by_book_id"),
     path("reading-history-list", ReadingHistoryListAllAPIView.as_view(), name="reading_history_list"),
     path("reading-history-list-by-child", ReadingHistoryByChildAPIView.as_view(), name="reading_history_list_by_child"),
     path("reading-history-list/<child_id>", ReadingHistoryByChildIdAPIView.as_view(), name="reading_history_list_by_child_id"),
