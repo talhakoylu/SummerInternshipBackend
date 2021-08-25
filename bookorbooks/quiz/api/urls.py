@@ -1,4 +1,3 @@
-from quiz.api.views.additional_report_views import GetAllClassesBySchoolPrincipalAPIView, GetAllSchoolClassStudentByCountryAPIView
 from quiz.api.views.taking_quiz_views import CreateTakingQuizAPIView, CreateTakingQuizAnswerAPIView, StudentsTakingQuizHistoryByClassIdAPIView, TakingQuizHistoryByInstructorAPIView, TakingQuizHistoryByParentAPIView, TakingQuizListByChildAPIView, UpdateTakingQuizAPIView
 from quiz.api.views.questions_views import GetLastEnabledQuizByBookIdAPIView, GetQuestionByIdAPIView, GetQuestionsByEnabledQuizIdAPIView, GetQuestionsByQuizIdAPIView, QuestionsAllAPIView
 from quiz.api.views.quiz_views import OnlyEnabledQuizesAPIView, QuizListAllAPIView
@@ -23,7 +22,4 @@ urlpatterns = [
     path("create-taking-quiz", CreateTakingQuizAPIView.as_view(), name="create_taking_quiz"),
     path("update-taking-quiz/<id>", UpdateTakingQuizAPIView.as_view(), name="update_taking_quiz"),
     path("create-taking-quiz-answer", CreateTakingQuizAnswerAPIView.as_view(), name="create_taking_quiz_answer"),
-
-    path("additional-reports/get-all-classes-by-school-principal", GetAllClassesBySchoolPrincipalAPIView.as_view(), name="get_all_classes_by_school_principal"),
-    path("additional-reports/get-all-data-about-quiz-history", GetAllSchoolClassStudentByCountryAPIView.as_view(), name="get_all_data_about_quiz_history"),
 ]

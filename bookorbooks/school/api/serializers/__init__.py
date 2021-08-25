@@ -1,3 +1,5 @@
 from .school_serializers import SchoolListSerializer, SchoolDetailSerializer
 from .class_serializers import ClassCreateSerializer
 from .student_list_serializers import CreateStudentListItemSerializer
+from .school_reading_history_report_serializers import *
+from .school_quiz_history_report_serializers import *

@@ -9,6 +9,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
+
 class TakingQuizAnswerSerializerReport(ModelSerializer):
     class Meta:
         model = TakingQuizAnswer
@@ -16,17 +17,21 @@ class TakingQuizAnswerSerializerReport(ModelSerializer):
 
 
 class QuizHistorySerializerReport(ModelSerializer):
-    quiz_title = serializers.CharField(source = "quiz.title")
-    quiz_book_name = serializers.CharField(source = "quiz.book.name")
-    answers = TakingQuizAnswerSerializerReport(many = True, source = "taking_quizes")
+    quiz_title = serializers.CharField(source="quiz.title")
+    quiz_book_name = serializers.CharField(source="quiz.book.name")
+    answers = TakingQuizAnswerSerializerReport(many=True,
+                                               source="taking_quizes")
+
     class Meta:
         model = TakingQuiz
         exclude = ["child"]
 
 
 class ChildSerializerReport(ModelSerializer):
-    hobbies = serializers.CharField(source = "user_child.hobbies")
-    quiz_history = QuizHistorySerializerReport(many = True, source = "user_child.child_taking_quiz")
+    hobbies = serializers.CharField(source="user_child.hobbies")
+    quiz_history = QuizHistorySerializerReport(
+        many=True, source="user_child.child_taking_quiz")
+
     class Meta:
         model = User
         exclude = [
@@ -35,8 +40,10 @@ class ChildSerializerReport(ModelSerializer):
             "date_joined", "user_type"
         ]
 
+
 class StudenListSerializerReport(ModelSerializer):
-    student = ChildSerializerReport(source = "child.user")
+    student = ChildSerializerReport(source="child.user")
+
     class Meta:
         model = StudentList
         exclude = ["created_at", "updated_at", "child"]
@@ -44,7 +51,7 @@ class StudenListSerializerReport(ModelSerializer):
 
 class InstructorSerializerReport(ModelSerializer):
     branch = serializers.CharField(source="user_instructor.branch")
-    is_principal = serializers.BooleanField(source = "user_instructor.principal")
+    is_principal = serializers.BooleanField(source="user_instructor.principal")
     gender_display = serializers.CharField(source="get_gender_display")
 
     class Meta:
@@ -58,7 +65,9 @@ class InstructorSerializerReport(ModelSerializer):
 
 class ClassSerializerReport(ModelSerializer):
     instructor = InstructorSerializerReport(source="instructor.user")
-    students = StudenListSerializerReport(many = True, source = "student_list_class")
+    students = StudenListSerializerReport(many=True,
+                                          source="student_list_class")
+
     class Meta:
         model = Class
         exclude = [
@@ -66,7 +75,6 @@ class ClassSerializerReport(ModelSerializer):
             "updated_at",
             "school",
         ]
-        
 
 
 class SchoolSerializerReport(ModelSerializer):
