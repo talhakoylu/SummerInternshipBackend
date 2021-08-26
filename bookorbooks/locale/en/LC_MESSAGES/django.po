@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-25 15:04+0300\n"
+"POT-Creation-Date: 2021-08-26 08:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -616,3 +616,11 @@ msgstr "Active"
 #: .\quiz\models\quiz_model.py:11
 msgid "Aktif Değil"
 msgstr "Not Active"
+
+#: .\quiz\models\taking_quiz_answer_model.py:43
+msgid "The selected answer must belong to the selected question."
+msgstr ""
+
+#: .\quiz\models\taking_quiz_answer_model.py:45
+msgid "The selected question must belong to the selected quiz."
+msgstr ""

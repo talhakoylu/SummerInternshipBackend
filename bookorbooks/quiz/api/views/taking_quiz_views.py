@@ -1,3 +1,5 @@
+from django.db.models.aggregates import Count
+from django.db.models.query_utils import Q
 from book.models.reading_history_model import ReadingHistory
 from constants.quiz_strings import QuizStrings
 from django.core.exceptions import ValidationError
@@ -111,7 +113,28 @@ class UpdateTakingQuizAPIView(RetrieveUpdateAPIView):
         return obj
 
     def perform_update(self, serializer):
-        return serializer.save(child=self.request.user.user_child)
+        # return serializer.save(child=self.request.user.user_child)
+        data = TakingQuizAnswer.objects.filter(taking_quiz_id = self.kwargs["id"]).aggregate(answer_count=Count('question', distinct=True), wrong_count=Count('answer_is_correct', filter = Q(answer_is_correct = False))) 
+        if data['answer_count'] == 0:
+            question_point = 0
+            total_point = 0
+        else:
+            question_point = 100 / data['answer_count'] 
+            total_point = 100 - (question_point * data['wrong_count'])
+        
+
+        if data == None or data['answer_count'] == None or data['wrong_count'] == None or total_point == None or question_point == None:
+            print("1")
+            return serializer.save(child=self.request.user.user_child, total_point = 0)
+        elif total_point < 0:
+            print("2")
+            return serializer.save(child=self.request.user.user_child, total_point = 0)
+        elif total_point > 100:
+            print("3")
+            return serializer.save(child=self.request.user.user_child, total_point = 100)
+        else:
+            print("4")
+            return serializer.save(child=self.request.user.user_child, total_point = total_point)
 
 
 class CreateTakingQuizAnswerAPIView(CreateAPIView):

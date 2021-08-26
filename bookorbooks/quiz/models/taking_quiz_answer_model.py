@@ -2,6 +2,8 @@ from django.core.exceptions import ValidationError
 from constants.quiz_strings import QuizStrings
 from quiz.models.abstract_base_model import AbstractQuizBaseModel
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
 
 class TakingQuizAnswer(AbstractQuizBaseModel):
     taking_quiz = models.ForeignKey("quiz.TakingQuiz", on_delete=models.CASCADE, related_name="taking_quizes", verbose_name=QuizStrings.TakingQuizAnswersStrings.taking_quiz_verbose_name)
@@ -25,7 +27,7 @@ class TakingQuizAnswer(AbstractQuizBaseModel):
         This is an overridden save method of TakingQuiz Model. Through this method, 
         the taking quiz title will be created automatically.
         """
-        self.taking_quiz_title = self.taking_quiz.get_taking_quiz_title
+        self.taking_quiz_title = self.taking_quiz.title
         self.question_text = self.question.question
         self.question_topic_content = self.question.topic
         self.answer_text = self.answer.answer
@@ -38,8 +40,8 @@ class TakingQuizAnswer(AbstractQuizBaseModel):
         Checks that whether the question id and the answer id are equal, and also checks whether the selected question is belong to solved exam.
         """
         if self.question != self.answer.question:
-                raise ValidationError("The selected answer must belong to the selected question.")
+                raise ValidationError(_("The selected answer must belong to the selected question."))
         if self.taking_quiz.quiz != self.question.quiz:
-            raise ValidationError("The selected question must belong to the selected quiz.")
+            raise ValidationError(_("The selected question must belong to the selected quiz."))
         
        

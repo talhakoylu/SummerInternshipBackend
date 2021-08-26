@@ -128,6 +128,7 @@ class TakingQuizCreateSerializer(ModelSerializer):
         Taking Quiz Create serializer. This serializer is using for create operaitons.
         The model has Child field, but Child field value will fill automatically from the request data.
     """
+    total_point = serializers.CharField(read_only = True)
     class Meta:
         model = TakingQuiz
         exclude = ["child"]
