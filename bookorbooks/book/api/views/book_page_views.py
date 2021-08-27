@@ -1,3 +1,4 @@
+from django.shortcuts import get_list_or_404
 from account.api.permissions import IsChild
 from rest_framework.permissions import IsAuthenticated
 from book.api.serializers import BookPageSerializer
@@ -15,9 +16,10 @@ class BooksPageListAPIView(ListAPIView):
 
 class BookPagesByBookIdAPIView(ListAPIView):
     """
-    Returns the list of all book pages.
+    Returns the page list of the book.
     """
-    queryset = BookPage.objects.all()
     serializer_class = BookPageSerializer
     permission_classes = [IsAuthenticated, IsChild]
-    lookup_field = "book_id"
+    
+    def get_queryset(self):
+        return get_list_or_404(BookPage, book_id = self.kwargs["book_id"])
