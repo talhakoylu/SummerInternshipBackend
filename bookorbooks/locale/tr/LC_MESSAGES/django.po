@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-26 08:32+0300\n"
+"POT-Creation-Date: 2021-08-27 15:03+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "Diğer"
 
 #: .\constants\account_strings.py:8 .\constants\account_strings.py:24
 #: .\constants\account_strings.py:48 .\constants\book_strings.py:65
-#: .\constants\quiz_strings.py:32
+#: .\constants\quiz_strings.py:33
 msgid "Çocuk"
 msgstr "Çocuk"
 
@@ -262,7 +262,7 @@ msgid "Kategoriler"
 msgstr ""
 
 #: .\constants\book_strings.py:24 .\constants\quiz_strings.py:10
-#: .\constants\quiz_strings.py:33
+#: .\constants\quiz_strings.py:34
 msgid "Başlık"
 msgstr ""
 
@@ -457,8 +457,8 @@ msgstr "Bu işlemi yapabilmek için admin olmanız gerekmektedir."
 msgid "Sınav Aktif Mi?"
 msgstr ""
 
-#: .\constants\quiz_strings.py:12 .\constants\quiz_strings.py:16
-#: .\constants\quiz_strings.py:31
+#: .\constants\quiz_strings.py:12 .\constants\quiz_strings.py:17
+#: .\constants\quiz_strings.py:32
 msgid "Sınav"
 msgstr ""
 
@@ -466,81 +466,91 @@ msgstr ""
 msgid "Sınavlar"
 msgstr ""
 
-#: .\constants\quiz_strings.py:17 .\constants\quiz_strings.py:20
-#: .\constants\quiz_strings.py:25 .\constants\quiz_strings.py:41
+#: .\constants\quiz_strings.py:14
+msgid ""
+"<p>Bir kitap birden fazla sınava sahip olabilir, hangi sınavın kullanıcıya "
+"gözükeceğini <b>Sınav Aktif Mi?</b> seçeneği ile belirleyebilirsiniz. "
+"Seçtiğiniz kitaba ait <span style ='color: red; font-weight: bold;'>aktif "
+"sınav</span> sayısının 1 olduğundan emin olunuz. Eğer birden fazla aktif "
+"sınav varsa, kullanıcı tarafında <span style ='color: red; font-weight: "
+"bold;'>aktif son sınav</span> kullanıcıya gösterilir.</p>"
+msgstr ""
+
+#: .\constants\quiz_strings.py:18 .\constants\quiz_strings.py:21
+#: .\constants\quiz_strings.py:26 .\constants\quiz_strings.py:42
 msgid "Soru"
 msgstr ""
 
-#: .\constants\quiz_strings.py:18
+#: .\constants\quiz_strings.py:19
 msgid "Konu"
 msgstr ""
 
-#: .\constants\quiz_strings.py:19
+#: .\constants\quiz_strings.py:20
 msgid "Rapor sayfasında, cevabın yanlış olması durumunda gösterilecek metin."
 msgstr ""
 
-#: .\constants\quiz_strings.py:21
+#: .\constants\quiz_strings.py:22
 msgid "Sorular"
 msgstr ""
 
-#: .\constants\quiz_strings.py:24 .\constants\quiz_strings.py:27
-#: .\constants\quiz_strings.py:43
+#: .\constants\quiz_strings.py:25 .\constants\quiz_strings.py:28
+#: .\constants\quiz_strings.py:44
 msgid "Cevap"
 msgstr ""
 
-#: .\constants\quiz_strings.py:26
+#: .\constants\quiz_strings.py:27
 msgid "Doğru Bir Cevap Mı?"
 msgstr ""
 
-#: .\constants\quiz_strings.py:28
+#: .\constants\quiz_strings.py:29
 msgid "Cevaplar"
 msgstr ""
 
-#: .\constants\quiz_strings.py:34 .\constants\quiz_strings.py:45
+#: .\constants\quiz_strings.py:35 .\constants\quiz_strings.py:46
 msgid "Toplam Puan"
 msgstr ""
 
-#: .\constants\quiz_strings.py:35
+#: .\constants\quiz_strings.py:36
 msgid "Çözülmüş Sınav Kaydı"
 msgstr ""
 
-#: .\constants\quiz_strings.py:36
+#: .\constants\quiz_strings.py:37
 msgid "Çözülmüş Sınav Kayıtları"
 msgstr ""
 
-#: .\constants\quiz_strings.py:39
+#: .\constants\quiz_strings.py:40
 msgid "Girilen Sınav"
 msgstr ""
 
-#: .\constants\quiz_strings.py:40
+#: .\constants\quiz_strings.py:41
 msgid "Girilen Sınav Başlığı"
 msgstr ""
 
-#: .\constants\quiz_strings.py:42
+#: .\constants\quiz_strings.py:43
 msgid "Sorunun Konusu"
 msgstr ""
 
-#: .\constants\quiz_strings.py:44
+#: .\constants\quiz_strings.py:45
 msgid "Cevap Doğru Mu?"
 msgstr ""
 
-#: .\constants\quiz_strings.py:46
+#: .\constants\quiz_strings.py:47
 msgid "Çözülmüş Sınav Cevabı"
 msgstr ""
 
-#: .\constants\quiz_strings.py:47
+#: .\constants\quiz_strings.py:48
 msgid "Çözülmüş Sınav Cevapları"
 msgstr ""
 
-#: .\constants\quiz_strings.py:50
+#: .\constants\quiz_strings.py:51
 msgid "This answer does not belong to the question you chose, please check it."
 msgstr "Bu cevap seçtiğiniz soruya ait değil, lütfen kontrol ediniz."
 
-#: .\constants\quiz_strings.py:51
+#: .\constants\quiz_strings.py:52
 msgid "This question does not belong to the exam you chose, please check it."
 msgstr "Bu soru seçtiğiniz sınava ait değil, lütfen kontrol edin."
 
-#: .\constants\quiz_strings.py:52
+#: .\constants\quiz_strings.py:53
 msgid "To solve the book quiz, you must finish reading that book."
 msgstr ""
 "Kitaba ait sınavı çözebilmek için kitabı okumayı bitirmiş olmanız gerekmekte."
@@ -613,11 +623,11 @@ msgstr ""
 msgid "Yanlış Cevap"
 msgstr ""
 
-#: .\quiz\models\quiz_model.py:10
+#: .\quiz\models\quiz_model.py:12
 msgid "Aktif"
 msgstr ""
 
-#: .\quiz\models\quiz_model.py:11
+#: .\quiz\models\quiz_model.py:13
 msgid "Aktif Değil"
 msgstr ""
 

@@ -111,4 +111,4 @@ class MeSerializer(ModelSerializer):
     user_type_value = serializers.CharField(source = "get_user_type_display")
     class Meta:
         model = User
-        fields = ["id", "username", "email", "first_name", "last_name", "user_type", "user_type_value"]
+        fields = ["id", "username", "email", "first_name", "last_name", "user_type", "user_type_value", "birth_date", "identity_number", "gender"]

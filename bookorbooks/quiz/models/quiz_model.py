@@ -1,9 +1,11 @@
-from django.utils.functional import cached_property
+from django.utils.functional import cached_property, lazy
 from constants.quiz_strings import QuizStrings
 from django.db import models
 from quiz.models.abstract_base_model import AbstractQuizBaseModel
 from django.utils.translation import ugettext_lazy as _
+from django.utils.safestring import mark_safe
 
+mark_safe_lazy = lazy(mark_safe, str)
 
 class Quiz(AbstractQuizBaseModel):
     ENABLED_CHOICES = (
@@ -13,7 +15,7 @@ class Quiz(AbstractQuizBaseModel):
     
     book = models.ForeignKey("book.Book", on_delete= models.CASCADE, related_name="book_quiz", verbose_name=QuizStrings.QuizStrings.book_verbose_name)
     title = models.CharField(max_length=150, verbose_name=QuizStrings.QuizStrings.title_verbose_name)
-    enabled = models.BooleanField(choices=ENABLED_CHOICES,verbose_name=QuizStrings.QuizStrings.enabled_verbose_name, default=False)
+    enabled = models.BooleanField(choices=ENABLED_CHOICES,verbose_name=QuizStrings.QuizStrings.enabled_verbose_name, default=False, help_text=mark_safe_lazy(QuizStrings.QuizStrings.enabled_help_text))
 
     class Meta:
         verbose_name = QuizStrings.QuizStrings.meta_quiz_verbose_name

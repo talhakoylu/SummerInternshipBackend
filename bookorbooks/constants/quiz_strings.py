@@ -11,6 +11,7 @@ class QuizStrings():
         enabled_verbose_name = _("Sınav Aktif Mi?")
         meta_quiz_verbose_name = _("Sınav")
         meta_quiz_verbose_name_plural = _("Sınavlar")
+        enabled_help_text = _("<p>Bir kitap birden fazla sınava sahip olabilir, hangi sınavın kullanıcıya gözükeceğini <b>Sınav Aktif Mi?</b> seçeneği ile belirleyebilirsiniz. Seçtiğiniz kitaba ait <span style ='color: red; font-weight: bold;'>aktif sınav</span> sayısının 1 olduğundan emin olunuz. Eğer birden fazla aktif sınav varsa, kullanıcı tarafında <span style ='color: red; font-weight: bold;'>aktif son sınav</span> kullanıcıya gösterilir.</p>")
 
     class QuestionStrings():
         quiz_verbose_name = _("Sınav")
