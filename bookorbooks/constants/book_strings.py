@@ -2,8 +2,8 @@ from django.utils.translation import ugettext_lazy as _
 
 class BookStrings():
     class BookLanguageStrings():
-        meta_verbose_name = _("Dil")
-        meta_verbose_name_plural = _("Diller")
+        meta_verbose_name = _("dil")
+        meta_verbose_name_plural = _("diller")
         language_name_verbose_name = _("Dil")
         language_code_verbose_name = _("Dil Kodu")
         language_code_help_text = _("Dil Kodu'nu <a href='http://www.lingoes.net/en/translator/langcode.htm'><strong>ISO Dil Kodları</strong></a> sayfasındaki kodlara uygun olarak giriniz. Bu kitap dinlerken okuyucunun tercüme dilini etkiliyor.")
@@ -17,14 +17,14 @@ class BookStrings():
         english_title_verbose_name = _("İngilizce Başlık")
         description_verbose_name = _("Türkçe Açıklama")
         english_description_verbose_name = _("İngilizce Açıklama")
-        meta_verbose_name = _("Kategori")
-        meta_verbose_name_plural = _("Kategoriler")
+        meta_verbose_name = _("kategori")
+        meta_verbose_name_plural = _("kategoriler")
 
     class BookLevelStrings():
         title_verbose_name = _("Başlık")
         english_title_verbose_name = _("İngilizce Başlık")
-        meta_verbose_name = _("Seviye")
-        meta_verbose_name_plural = _("Kitap Seviyeleri")
+        meta_verbose_name = _("seviye")
+        meta_verbose_name_plural = _("kitap seviyeleri")
 
     class BookStrings():
         category_verbose_name = _("Kategori")
@@ -35,16 +35,16 @@ class BookStrings():
         author_verbose_name = _("Yazar")
         page_verbose_name = _("Sayfa Sayısı")
         cover_image_verbose_name = _("Kapak Görseli")
-        meta_verbose_name = _("Kitap")
-        meta_verbose_name_plural = _("Kitaplar")
+        meta_verbose_name = _("kitap")
+        meta_verbose_name_plural = _("kitaplar")
 
     class Author():
         first_name_verbose_name = _("İsim")
         last_name_verbose_name = _("Soyisim")
         photo_verbose_name = _("Fotoğraf")
         biography_verbose_name = _("Biyografi")
-        meta_verbose_name = _("Yazar")
-        meta_verbose_name_plural = _("Yazarlar")
+        meta_verbose_name = _("yazar")
+        meta_verbose_name_plural = _("yazarlar")
 
     class BookPageStrings():
         book_verbose_name = _("Kitap")
@@ -55,8 +55,8 @@ class BookStrings():
         image_position_verbose_name = _("Görselin Konumu")
         content_position_verbose_name = _("İçeriğin Konumu")
         image_position_verbose_name = _("Görselin Konumu")
-        meta_verbose_name = _("Kitap Sayfası")
-        meta_verbose_name_plural = _("Kitap Sayfaları")
+        meta_verbose_name = _("kitap sayfası")
+        meta_verbose_name_plural = _("kitap sayfaları")
         text_inside_image = _("Is the Text inside the Image?")
         text_inside_image_help = _("If you choose this option, the text will be positioned inside the image. Otherwise, the center option of text position will be disabled in frontend.")
 
@@ -67,8 +67,8 @@ class BookStrings():
         is_finished_false = _("Hayır")
         is_finished_true = _("Evet")
         counter_verbose_name = _("Okuma Sayacı")
-        meta_verbose_name = _("Okuma Geçmişi")
-        meta_verbose_name_plural = _("Okuma Geçmişleri")
+        meta_verbose_name = _("okuma geçmişi")
+        meta_verbose_name_plural = _("okuma geçmişleri")
         exists_error = _("Bu kayıt daha önce eklendiği için yenisini ekleyemezsiniz, bunun yerine varolan kaydı düzenlemeyi deneyiniz.")
 
     class PermissionStrings():

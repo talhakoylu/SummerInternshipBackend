@@ -1,3 +1,5 @@
+from constants.school_strings import SchoolStrings
+from constants.account_strings import AccountStrings
 from account.models.instructor_model import InstructorProfile
 from account.models.child_list_model import ChildList
 from django.core.checks.messages import Error
@@ -43,7 +45,8 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     add_fieldsets = ((None, {
         'fields': (('first_name', 'last_name'), ('username', 'email'),
-                   ('password1', 'password2'), ('gender', 'user_type', 'identity_number')),
+                   ('password1', 'password2'), ('gender', 'user_type',
+                                                'identity_number')),
     }), )
     form = CustomUserChangeForm
     model = CustomUser
@@ -73,12 +76,17 @@ class ChildProfileAdmin(admin.ModelAdmin):
     def user_gender(self, obj):
         return obj.user.get_gender_display()
 
-    user_gender.short_description = "Cinsiyet"
+    user_gender.short_description = AccountStrings.CustomUserStrings.gender_verbose_name
 
     def full_name(self, obj):
         return obj.get_full_name
 
-    full_name.short_description = "İsim Soyisim"
+    full_name.short_description = AccountStrings.CustomUserStrings.full_name
+
+
+class ChildRecordInlineAdmin(admin.StackedInline):
+    model = ChildList
+    extra = 0
 
 
 @admin.register(ParentProfile)
@@ -87,6 +95,7 @@ class ParentProfileAdmin(admin.ModelAdmin):
     form = ParentProfileAdminForm
     list_display = ["pk", "full_name", "user_email", "user_gender"]
     list_display_links = ["pk", "full_name"]
+    inlines = [ChildRecordInlineAdmin]
 
     def user_email(self, obj):
         return obj.user.email
@@ -96,36 +105,20 @@ class ParentProfileAdmin(admin.ModelAdmin):
     def user_gender(self, obj):
         return obj.user.get_gender_display()
 
-    user_gender.short_description = "Cinsiyet"
+    user_gender.short_description = AccountStrings.CustomUserStrings.gender_verbose_name
 
     def full_name(self, obj):
         return obj.get_full_name
 
-    full_name.short_description = "İsim Soyisim"
-
-
-@admin.register(ChildList)
-class ChildListModel(admin.ModelAdmin):
-    model = ChildList
-    list_display = ["id", "get_parent", "get_child"]
-    list_display_links = ["id", "get_parent"]
-
-    def get_parent(self, obj):
-        return obj.parent.get_full_name
-    get_parent.admin_order_field  = 'parent'  
-    get_parent.short_description = 'Parent'  
-    
-    
-    def get_child(self, obj):
-        return obj.child.get_full_name
-    get_child.admin_order_field  = 'child'  
-    get_child.short_description = 'Child'  
+    full_name.short_description = AccountStrings.CustomUserStrings.full_name
 
 
 @admin.register(InstructorProfile)
 class InstructorProfileAdmin(admin.ModelAdmin):
     model = InstructorProfile
-    list_display = ["pk", "full_name", "instructor_school", "user_email", "user_gender"]
+    list_display = [
+        "pk", "full_name", "instructor_school", "user_email", "user_gender"
+    ]
     list_display_links = ["pk", "full_name"]
 
     def user_email(self, obj):
@@ -136,14 +129,14 @@ class InstructorProfileAdmin(admin.ModelAdmin):
     def user_gender(self, obj):
         return obj.user.get_gender_display()
 
-    user_gender.short_description = "Cinsiyet"
+    user_gender.short_description = AccountStrings.CustomUserStrings.gender_verbose_name
 
     def full_name(self, obj):
         return obj.get_full_name
 
-    full_name.short_description = "İsim Soyisim"
-    
+    full_name.short_description = AccountStrings.CustomUserStrings.full_name
+
     def instructor_school(self, obj):
         return obj.school
 
-    instructor_school.short_description = "Okul"
+    instructor_school.short_description = SchoolStrings.SchoolStrings.meta_verbose_name

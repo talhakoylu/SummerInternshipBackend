@@ -3,11 +3,17 @@ from school.models.class_model import Class
 from school.models.school_model import School
 from django.contrib import admin
 
+class ClassInlineAdmin(admin.StackedInline):
+    model = Class
+    extra = 0
+
 @admin.register(School)
 class SchoolAdmin(admin.ModelAdmin):
     list_display = ["id", "name", "website", "address"]
     list_display_links = ["id", "name"]
     search_fields = ["name", "website", "address"]
+    inlines = [ClassInlineAdmin]
+
     class Meta:
         model = School
 
@@ -18,6 +24,7 @@ class ClassAdmin(admin.ModelAdmin):
     list_display_links = ["id", "name"]
     search_fields = ["name", "instructor__user__first_name", "school__name"]
     autocomplete_fields = ["school"]
+
     class Meta:
         model = Class
 

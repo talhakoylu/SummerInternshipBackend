@@ -33,8 +33,8 @@ class QuizStrings():
         child_verbose_name = _("Çocuk")
         title_verbose_name = _("Başlık")
         total_point_verbose_name = _("Toplam Puan")
-        meta_verbose_name = _("Çözülmüş Sınav Kaydı") 
-        meta_verbose_name_plural = _("Çözülmüş Sınav Kayıtları")
+        meta_verbose_name = _("çözülmüş sınav kaydı") 
+        meta_verbose_name_plural = _("çözülmüş sınav kayıtları")
     
     class TakingQuizAnswersStrings():
         taking_quiz_verbose_name = _("Girilen Sınav")
@@ -44,8 +44,8 @@ class QuizStrings():
         answer_verbose_name = _("Cevap")
         answer_is_correct_verbose_name = _("Cevap Doğru Mu?")
         total_point_verbose_name = _("Toplam Puan")
-        meta_verbose_name = _("Çözülmüş Sınav Cevabı") 
-        meta_verbose_name_plural = _("Çözülmüş Sınav Cevapları")
+        meta_verbose_name = _("çözülmüş sınav cevabı") 
+        meta_verbose_name_plural = _("çözülmüş sınav cevapları")
 
     class ValidationErrorMessages():
         answer_is_not_belong_to_question = _("This answer does not belong to the question you chose, please check it.")

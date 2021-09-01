@@ -9,8 +9,7 @@ class CountryAdmin(admin.ModelAdmin):
     list_display = ["id", "name", "code", "created_at", "updated_at"]
     list_display_links = ["id", "name", "code"]
     search_fields = ["id", "name", "code"]
-    search_fields = ['name', "code"]
-
+    
     class Meta:
         model = Country
 

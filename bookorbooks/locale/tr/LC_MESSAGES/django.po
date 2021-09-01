@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-27 15:03+0300\n"
+"POT-Creation-Date: 2021-09-01 13:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,19 +50,16 @@ msgstr "Kadın"
 msgid "Other"
 msgstr "Diğer"
 
-#: .\constants\account_strings.py:8 .\constants\account_strings.py:24
-#: .\constants\account_strings.py:48 .\constants\book_strings.py:65
-#: .\constants\quiz_strings.py:33
+#: .\constants\account_strings.py:8 .\constants\account_strings.py:49
+#: .\constants\book_strings.py:65 .\constants\quiz_strings.py:33
 msgid "Çocuk"
 msgstr "Çocuk"
 
-#: .\constants\account_strings.py:9 .\constants\account_strings.py:32
-#: .\constants\account_strings.py:47
+#: .\constants\account_strings.py:9 .\constants\account_strings.py:48
 msgid "Ebeveyn"
 msgstr ""
 
-#: .\constants\account_strings.py:10 .\constants\account_strings.py:41
-#: .\constants\school_strings.py:14
+#: .\constants\account_strings.py:10 .\constants\school_strings.py:14
 msgid "Eğitmen"
 msgstr ""
 
@@ -90,80 +87,99 @@ msgstr ""
 msgid "Hesap Türü"
 msgstr ""
 
-#: .\constants\account_strings.py:17 .\constants\account_strings.py:21
-#: .\constants\account_strings.py:29 .\constants\account_strings.py:38
-msgid "Kullanıcı"
+#: .\constants\account_strings.py:17
+msgid "kullanıcı"
 msgstr ""
 
 #: .\constants\account_strings.py:18
-msgid "Kullanıcılar"
+msgid "kullanıcılar"
+msgstr ""
+
+#: .\constants\account_strings.py:19
+msgid "isim soyisim"
 msgstr ""
 
 #: .\constants\account_strings.py:22 .\constants\account_strings.py:30
-#: .\constants\country_strings.py:14 .\constants\country_strings.py:16
+#: .\constants\account_strings.py:39
+msgid "Kullanıcı"
+msgstr ""
+
+#: .\constants\account_strings.py:23 .\constants\account_strings.py:31
+#: .\constants\country_strings.py:16
 msgid "Şehir"
 msgstr ""
 
-#: .\constants\account_strings.py:23
+#: .\constants\account_strings.py:24
 msgid "Hobiler"
 msgstr ""
 
 #: .\constants\account_strings.py:25
-msgid "Çocuklar"
-msgstr ""
+msgid "çocuk"
+msgstr "çocuk"
 
 #: .\constants\account_strings.py:26
+msgid "çocuklar"
+msgstr "çocuk"
+
+#: .\constants\account_strings.py:27
 msgid ""
 "Kullanıcı bir çocuk olarak belirtilmemiş, ekleyebilmek için önce hesap "
 "ayarlarından statüsünü çocuk yapın!"
 msgstr ""
 
-#: .\constants\account_strings.py:31
+#: .\constants\account_strings.py:32
 msgid "Meslek"
 msgstr ""
 
 #: .\constants\account_strings.py:33
-msgid "Ebeveynler"
+msgid "ebeveyn"
 msgstr ""
 
 #: .\constants\account_strings.py:34
+msgid "ebeveynler"
+msgstr ""
+
+#: .\constants\account_strings.py:35
 msgid ""
 "Kullanıcı bir ebevyn olarak belirtilmemiş, ekleyebilmek için önce hesap "
 "ayarlarından statüsünü ebeveyn yapın!"
 msgstr ""
 
-#: .\constants\account_strings.py:39 .\constants\school_strings.py:9
-#: .\constants\school_strings.py:13
+#: .\constants\account_strings.py:40 .\constants\school_strings.py:13
 msgid "Okul"
 msgstr ""
 
-#: .\constants\account_strings.py:40
+#: .\constants\account_strings.py:41
 msgid "Branş"
 msgstr ""
 
 #: .\constants\account_strings.py:42
-msgid "Eğitmenler"
+msgid "eğitmen"
 msgstr ""
 
 #: .\constants\account_strings.py:43
+msgid "eğitmenler"
+msgstr ""
+
+#: .\constants\account_strings.py:44
 msgid ""
 "Kullanıcı bir eğitmen olarak belirtilmemiş, ekleyebilmek için önce hesap "
 "ayarlarından statüsünü eğitmen yapın!"
 msgstr ""
 
-#: .\constants\account_strings.py:44
+#: .\constants\account_strings.py:45
 msgid "Müdür"
 msgstr ""
 
-#: .\constants\account_strings.py:49
-msgid "Ebeveyn ve Çocuk Kaydı"
-msgstr ""
-
 #: .\constants\account_strings.py:50
-msgid "Ebeveyn ve Çocuk Kayıtları"
+msgid "ebeveyn ve çocuk kaydı"
 msgstr ""
 
-#: .\constants\account_strings.py:53
+#: .\constants\account_strings.py:51
+msgid "ebeveyn ve çocuk kayıtları"
+msgstr ""
+
+#: .\constants\account_strings.py:54
 msgid ""
 "You cannot pass data other than: 1- default, 2- child, 3- parent, 4- "
 "instructor"
@@ -171,29 +187,29 @@ msgstr ""
 "1- default, 2- çocuk, 3- ebeveyn, 4- eğitmen değerleri dışında bir değer "
 "gönderemezsiniz."
 
-#: .\constants\account_strings.py:54
+#: .\constants\account_strings.py:55
 msgid "You cannot pass data other than: 1- male, 2- female, 3- other"
 msgstr ""
 "1- erkek, 2- kadın, 3- diğer değerlerinden farklı bir değer gönderemezsiniz."
 
-#: .\constants\account_strings.py:55
+#: .\constants\account_strings.py:56
 msgid "Identity number can only consist of numbers and cannot be long than 11."
 msgstr ""
 "Kimlik numarası sadece sayılardan oluşmalı ve 11 haneden uzun olmamalı."
 
-#: .\constants\account_strings.py:58
+#: .\constants\account_strings.py:59
 msgid "To do this, you must be a parent."
 msgstr "Bu işlemi yapabilmek için bir ebevyn olmanız gerekmektedir."
 
-#: .\constants\account_strings.py:59
+#: .\constants\account_strings.py:60
 msgid "To do this, you must be a child."
 msgstr "Bu işlemi yapabilmek için bir çocuk olmanız gerekmektedir."
 
-#: .\constants\account_strings.py:60
+#: .\constants\account_strings.py:61
 msgid "To do this, you must be a instructor."
 msgstr "Bu işlemi yapabilmek için bir eğitmen olmanız gerekmektedir."
 
-#: .\constants\account_strings.py:61
+#: .\constants\account_strings.py:62
 msgid ""
 "To do this, you have to choose the school you work at from your profile "
 "page. If the problem persists, please contact the administrator."
@@ -202,20 +218,24 @@ msgstr ""
 "gerekmektedir. Eğer bir problemle karşılaşırsanız yönetici ile iletişime "
 "geçiniz."
 
-#: .\constants\account_strings.py:62
+#: .\constants\account_strings.py:63
 msgid "To do this, you must be the owner of this class."
 msgstr "Bu işlemi yapabilmek için bu sınıfın eğitmeni siz olmalısınız."
 
-#: .\constants\account_strings.py:63
+#: .\constants\account_strings.py:64
 msgid "To do this, you must be the parent of this child."
 msgstr "Bu işlemi yapabilmek için bu çocuğun ebeveyni siz olmalısınız."
 
-#: .\constants\book_strings.py:5 .\constants\book_strings.py:7
-msgid "Dil"
+#: .\constants\book_strings.py:5
+msgid "dil"
 msgstr ""
 
 #: .\constants\book_strings.py:6
-msgid "Diller"
+msgid "diller"
+msgstr ""
+
+#: .\constants\book_strings.py:7
+msgid "Dil"
 msgstr ""
 
 #: .\constants\book_strings.py:8
@@ -253,12 +273,12 @@ msgstr ""
 msgid "İngilizce Açıklama"
 msgstr ""
 
-#: .\constants\book_strings.py:20 .\constants\book_strings.py:30
-msgid "Kategori"
+#: .\constants\book_strings.py:20
+msgid "kategori"
 msgstr ""
 
 #: .\constants\book_strings.py:21
-msgid "Kategoriler"
+msgid "kategoriler"
 msgstr ""
 
 #: .\constants\book_strings.py:24 .\constants\quiz_strings.py:10
@@ -266,12 +286,20 @@ msgstr ""
 msgid "Başlık"
 msgstr ""
 
-#: .\constants\book_strings.py:26 .\constants\book_strings.py:31
-msgid "Seviye"
+#: .\constants\book_strings.py:26
+msgid "seviye"
 msgstr ""
 
 #: .\constants\book_strings.py:27
-msgid "Kitap Seviyeleri"
+msgid "kitap seviyeleri"
+msgstr ""
+
+#: .\constants\book_strings.py:30
+msgid "Kategori"
+msgstr ""
+
+#: .\constants\book_strings.py:31
+msgid "Seviye"
 msgstr ""
 
 #: .\constants\book_strings.py:32
@@ -286,7 +314,7 @@ msgstr ""
 msgid "Açıklama"
 msgstr ""
 
-#: .\constants\book_strings.py:35 .\constants\book_strings.py:46
+#: .\constants\book_strings.py:35
 msgid "Yazar"
 msgstr ""
 
@@ -298,13 +326,12 @@ msgstr ""
 msgid "Kapak Görseli"
 msgstr ""
 
-#: .\constants\book_strings.py:38 .\constants\book_strings.py:50
-#: .\constants\book_strings.py:64 .\constants\quiz_strings.py:9
-msgid "Kitap"
+#: .\constants\book_strings.py:38
+msgid "kitap"
 msgstr ""
 
 #: .\constants\book_strings.py:39
-msgid "Kitaplar"
+msgid "kitaplar"
 msgstr ""
 
 #: .\constants\book_strings.py:43
@@ -319,8 +346,17 @@ msgstr ""
 msgid "Biyografi"
 msgstr ""
 
+#: .\constants\book_strings.py:46
+msgid "yazar"
+msgstr ""
+
 #: .\constants\book_strings.py:47
-msgid "Yazarlar"
+msgid "yazarlar"
+msgstr ""
+
+#: .\constants\book_strings.py:50 .\constants\book_strings.py:64
+#: .\constants\quiz_strings.py:9
+msgid "Kitap"
 msgstr ""
 
 #: .\constants\book_strings.py:51
@@ -348,11 +384,11 @@ msgid "İçeriğin Konumu"
 msgstr ""
 
 #: .\constants\book_strings.py:58
-msgid "Kitap Sayfası"
+msgid "kitap sayfası"
 msgstr ""
 
 #: .\constants\book_strings.py:59
-msgid "Kitap Sayfaları"
+msgid "kitap sayfaları"
 msgstr ""
 
 #: .\constants\book_strings.py:60
@@ -385,11 +421,11 @@ msgid "Okuma Sayacı"
 msgstr ""
 
 #: .\constants\book_strings.py:70
-msgid "Okuma Geçmişi"
+msgid "okuma geçmişi"
 msgstr ""
 
 #: .\constants\book_strings.py:71
-msgid "Okuma Geçmişleri"
+msgid "okuma geçmişleri"
 msgstr ""
 
 #: .\constants\book_strings.py:72
@@ -406,27 +442,33 @@ msgstr "Kaydını görmek istediğiniz kişi sizin çocuğunuz olmak zorundadır
 msgid "To see this page, you must be a parent or an instructor"
 msgstr "Bu sayfayı görebilmek için bir ebevyn veya eğitmen olmanız gerekmekte."
 
-#: .\constants\country_strings.py:5 .\constants\country_strings.py:7
-#: .\constants\country_strings.py:9 .\constants\country_strings.py:12
-#: .\constants\country_strings.py:22
-msgid "Ülke"
+#: .\constants\country_strings.py:5
+msgid "ülke"
 msgstr ""
 
 #: .\constants\country_strings.py:6
-msgid "Ülkeler"
+msgid "ülkeler"
+msgstr ""
+
+#: .\constants\country_strings.py:7 .\constants\country_strings.py:9
+#: .\constants\country_strings.py:12 .\constants\country_strings.py:22
+msgid "Ülke"
 msgstr ""
 
 #: .\constants\country_strings.py:8
 msgid "Ülke Kodu"
 msgstr ""
 
-#: .\constants\country_strings.py:13 .\constants\country_strings.py:23
-#: .\constants\country_strings.py:25
+#: .\constants\country_strings.py:13 .\constants\country_strings.py:25
 msgid "Bölge"
 msgstr ""
 
-#: .\constants\country_strings.py:15 .\constants\school_strings.py:5
-msgid "Şehirler"
+#: .\constants\country_strings.py:14
+msgid "şehir"
+msgstr ""
+
+#: .\constants\country_strings.py:15
+msgid "şehirler"
 msgstr ""
 
 #: .\constants\country_strings.py:17
@@ -441,8 +483,12 @@ msgstr ""
 "Bu şehri ekleyebilmek için bölge ve ülke birbiriyle bağlantılı olmak "
 "zorundadır."
 
+#: .\constants\country_strings.py:23
+msgid "bölge"
+msgstr ""
+
 #: .\constants\country_strings.py:24
-msgid "Bölgeler"
+msgid "bölgeler"
 msgstr ""
 
 #: .\constants\general_strings.py:4
@@ -511,11 +557,11 @@ msgid "Toplam Puan"
 msgstr ""
 
 #: .\constants\quiz_strings.py:36
-msgid "Çözülmüş Sınav Kaydı"
+msgid "çözülmüş sınav kaydı"
 msgstr ""
 
 #: .\constants\quiz_strings.py:37
-msgid "Çözülmüş Sınav Kayıtları"
+msgid "çözülmüş sınav kayıtları"
 msgstr ""
 
 #: .\constants\quiz_strings.py:40
@@ -535,11 +581,11 @@ msgid "Cevap Doğru Mu?"
 msgstr ""
 
 #: .\constants\quiz_strings.py:47
-msgid "Çözülmüş Sınav Cevabı"
+msgid "çözülmüş sınav cevabı"
 msgstr ""
 
 #: .\constants\quiz_strings.py:48
-msgid "Çözülmüş Sınav Cevapları"
+msgid "çözülmüş sınav cevapları"
 msgstr ""
 
 #: .\constants\quiz_strings.py:51
@@ -555,6 +601,10 @@ msgid "To solve the book quiz, you must finish reading that book."
 msgstr ""
 "Kitaba ait sınavı çözebilmek için kitabı okumayı bitirmiş olmanız gerekmekte."
 
+#: .\constants\school_strings.py:5
+msgid "Şehirler"
+msgstr ""
+
 #: .\constants\school_strings.py:6
 msgid "Okul Adı"
 msgstr ""
@@ -567,8 +617,12 @@ msgstr ""
 msgid "Web Adresi"
 msgstr ""
 
+#: .\constants\school_strings.py:9
+msgid "okul"
+msgstr ""
+
 #: .\constants\school_strings.py:10
-msgid "Okullar"
+msgid "okullar"
 msgstr ""
 
 #: .\constants\school_strings.py:15
@@ -579,12 +633,12 @@ msgstr ""
 msgid "Sınıf Derecesi"
 msgstr ""
 
-#: .\constants\school_strings.py:17 .\constants\school_strings.py:22
-msgid "Sınıf"
+#: .\constants\school_strings.py:17
+msgid "sınıf"
 msgstr ""
 
 #: .\constants\school_strings.py:18
-msgid "Sınıflar"
+msgid "sınıflar"
 msgstr ""
 
 #: .\constants\school_strings.py:19
@@ -595,16 +649,20 @@ msgstr ""
 "Bu öğretmeni bu sınıfa atayamazsınız. Sebebi, bu öğretmen başka bir okulda "
 "görev almakta."
 
+#: .\constants\school_strings.py:22
+msgid "Sınıf"
+msgstr ""
+
 #: .\constants\school_strings.py:23
 msgid "Öğrenci/Çocuk"
 msgstr ""
 
 #: .\constants\school_strings.py:24
-msgid "Sınıf Öğrencisi"
+msgid "sınıf öğrencisi"
 msgstr ""
 
 #: .\constants\school_strings.py:25
-msgid "Sınıf Öğrencileri"
+msgid "sınıf öğrencileri"
 msgstr ""
 
 #: .\constants\school_strings.py:26

@@ -54,6 +54,10 @@ class BookPage(AbstractBookBaseModel):
         """
         return "Book: {} Page: {}".format(self.book.name, self.page_number)
 
+    @property
+    def page_number_count(self):
+        return BookPage.objects.filter(book = self.book.pk).count()
+
     def __str__(self):
         return self.get_page_title
 
@@ -66,4 +70,9 @@ class BookPage(AbstractBookBaseModel):
         It's an overridden save method. In this way, the page title creates automatically.
         """
         self.title = self.get_page_title
+        if not self.pk:
+            self.book.page = self.page_number_count + 1
+        else:
+            self.book.page = self.page_number_count
+        self.book.save()
         return super(BookPage, self).save(*args, **kwargs)

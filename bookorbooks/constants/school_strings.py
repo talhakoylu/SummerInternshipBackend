@@ -6,21 +6,21 @@ class SchoolStrings():
         name_verbose_name = _("Okul Adı")
         address_verbose_name = _("Adres")
         website_verbose_name = _("Web Adresi")
-        meta_verbose_name = _("Okul")
-        meta_verbose_name_plural = _("Okullar")
+        meta_verbose_name = _("okul")
+        meta_verbose_name_plural = _("okullar")
     
     class ClassStrings():
         school_verbose_name = _("Okul")
         instructor_verbose_name = _("Eğitmen")
         name_verbose_name = _("Sınıf Adı")
         grade_verbose_name = _("Sınıf Derecesi")
-        meta_verbose_name = _("Sınıf")
-        meta_verbose_name_plural = _("Sınıflar")
+        meta_verbose_name = _("sınıf")
+        meta_verbose_name_plural = _("sınıflar")
         instructor_not_working_at_this_school_error = _("You cannot assign this instructor to a class from this school. The instructor does not work in this school.")
     
     class StudentListStrings():
         school_class_verbose_name = _("Sınıf")
         child_verbose_name = _("Öğrenci/Çocuk")
-        meta_verbose_name = _("Sınıf Öğrencisi")
-        meta_verbose_name_plural = _("Sınıf Öğrencileri")
+        meta_verbose_name = _("sınıf öğrencisi")
+        meta_verbose_name_plural = _("sınıf öğrencileri")
         child_already_added_to_this_class_error = _("Because this student was previously added to this class, you cannot add them again.")

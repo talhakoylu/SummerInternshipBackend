@@ -14,23 +14,24 @@ class AccountStrings():
         birth_date_verbose_name = _("Doğum Tarihi")
         gender_verbose_name = _("Cinsiyet")
         user_type_verbose_name = _("Hesap Türü")
-        meta_verbose_name = _("Kullanıcı")
-        meta_verbose_name_plural = _("Kullanıcılar")
+        meta_verbose_name = _("kullanıcı")
+        meta_verbose_name_plural = _("kullanıcılar")
+        full_name = _("isim soyisim")
 
     class ChildProfileStrings():
         user_verbose_name = _("Kullanıcı")
         city_verbose_name = _("Şehir")
         hobbies_verbose_name = _("Hobiler")
-        meta_verbose_name = _("Çocuk")
-        meta_verbose_name_plural = _("Çocuklar")
+        meta_verbose_name = _("çocuk")
+        meta_verbose_name_plural = _("çocuklar")
         user_type_error = _("Kullanıcı bir çocuk olarak belirtilmemiş, ekleyebilmek için önce hesap ayarlarından statüsünü çocuk yapın!")
     
     class ParentProfileStrings():
         user_verbose_name = _("Kullanıcı")
         city_verbose_name = _("Şehir")
         profession_verbose_name = _("Meslek")
-        meta_verbose_name = _("Ebeveyn")
-        meta_verbose_name_plural = _("Ebeveynler")
+        meta_verbose_name = _("ebeveyn")
+        meta_verbose_name_plural = _("ebeveynler")
         user_type_error = _("Kullanıcı bir ebevyn olarak belirtilmemiş, ekleyebilmek için önce hesap ayarlarından statüsünü ebeveyn yapın!")
     
     
@@ -38,16 +39,16 @@ class AccountStrings():
         user_verbose_name = _("Kullanıcı")
         school_verbose_name = _("Okul")
         branch_verbose_name = _("Branş")
-        meta_verbose_name = _("Eğitmen")
-        meta_verbose_name_plural = _("Eğitmenler")
+        meta_verbose_name = _("eğitmen")
+        meta_verbose_name_plural = _("eğitmenler")
         user_type_error = _("Kullanıcı bir eğitmen olarak belirtilmemiş, ekleyebilmek için önce hesap ayarlarından statüsünü eğitmen yapın!")
         principal_verbose_name = _("Müdür")
 
     class ChildListString():
         parent_verbose_name = _("Ebeveyn")
         child_verbose_name = _("Çocuk")
-        meta_verbose_name = _("Ebeveyn ve Çocuk Kaydı")
-        meta_verbose_name_plural = _("Ebeveyn ve Çocuk Kayıtları")
+        meta_verbose_name = _("ebeveyn ve çocuk kaydı")
+        meta_verbose_name_plural = _("ebeveyn ve çocuk kayıtları")
 
     class RegisterSerializerStrings():
         user_type_error = _("You cannot pass data other than: 1- default, 2- child, 3- parent, 4- instructor")

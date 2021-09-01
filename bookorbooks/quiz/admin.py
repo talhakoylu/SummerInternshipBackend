@@ -55,6 +55,12 @@ class QuizAdmin(admin.ModelAdmin):
         model = Quiz
 
 
+class AnswerInlineAdminAdmin(admin.StackedInline):
+    form = AnswerAdminForm
+    model = Answer
+    extra = 0
+
+
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     form = QuestionAdminForm
@@ -62,7 +68,7 @@ class QuestionAdmin(admin.ModelAdmin):
     list_display_links = ["id", "question_short"]
     search_fields = ["question", "quiz__title", "quiz__book__name", "topic"]
     autocomplete_fields = ["quiz"]
-
+    inlines = [AnswerInlineAdminAdmin]
     class Meta:
         model = Question
 
@@ -76,33 +82,53 @@ class QuestionAdmin(admin.ModelAdmin):
     topic_short.admin_order_field  = 'topic'  
     topic_short.short_description = QuizStrings.QuestionStrings.topic_verbose_name
 
-@admin.register(Answer)
-class AnswerAdmin(admin.ModelAdmin):
-    form = AnswerAdminForm
-    list_display = ("id", "answer_short", "question_short", "quiz_title", "is_correct", "created_at", "updated_at")
-    list_display_links = ["id", "answer_short"]
-    search_fields = ["answer", "question__question", "question__quiz__title", "question__quiz__book__name"]
-    autocomplete_fields = ["question"]
+# @admin.register(Answer)
+# class AnswerAdmin(admin.ModelAdmin):
+#     form = AnswerAdminForm
+#     list_display = ("id", "answer_short", "question_short", "quiz_title", "is_correct", "created_at", "updated_at")
+#     list_display_links = ["id", "answer_short"]
+#     search_fields = ["answer", "question__question", "question__quiz__title", "question__quiz__book__name"]
+#     autocomplete_fields = ["question"]
 
-    class Meta:
-        model = Answer
+#     class Meta:
+#         model = Answer
 
-    def quiz_title(self, obj):
-        return obj.question.quiz.title
-    quiz_title.admin_order_field  = 'question__quiz_id'  
-    quiz_title.short_description = QuizStrings.QuizStrings.meta_quiz_verbose_name
+#     def quiz_title(self, obj):
+#         return obj.question.quiz.title
+#     quiz_title.admin_order_field  = 'question__quiz_id'  
+#     quiz_title.short_description = QuizStrings.QuizStrings.meta_quiz_verbose_name
     
     
-    def answer_short(self, obj):
-        return obj.answer_short
-    answer_short.admin_order_field  = 'answer'  
-    answer_short.short_description = QuizStrings.AnswerStrings.answer_verbose_name
+#     def answer_short(self, obj):
+#         return obj.answer_short
+#     answer_short.admin_order_field  = 'answer'  
+#     answer_short.short_description = QuizStrings.AnswerStrings.answer_verbose_name
     
     
-    def question_short(self, obj):
-        return obj.question.question_short
-    question_short.admin_order_field  = 'question'  
-    question_short.short_description = QuizStrings.QuestionStrings.question_verbose_name
+#     def question_short(self, obj):
+#         return obj.question.question_short
+#     question_short.admin_order_field  = 'question'  
+#     question_short.short_description = QuizStrings.QuestionStrings.question_verbose_name
+
+
+# @admin.register(TakingQuizAnswer)
+# class TakingQuizAnswerAdmin(admin.ModelAdmin):
+#     list_display = ["id", "taking_quiz_title", "question", "answer"]
+#     list_display_links = ["id", "taking_quiz_title"]
+#     search_fields = [ "id", "taking_quiz_title", "question_text", "question_topic_content", "answer_text", "taking_quiz__quiz__title", "taking_quiz__quiz__book"]
+#     autocomplete_fields = ["taking_quiz"]
+#     exclude = ("taking_quiz_title", "question_text", "question_topic_content", "answer_text", "answer_is_correct",)
+#     readonly_fields=("taking_quiz_title", "question_text", "question_topic_content", "answer_text", "answer_is_correct", )
+#     class Meta:
+#         model = TakingQuizAnswer
+
+class TakingQuizAnswerInlineAdmin(admin.StackedInline):
+    autocomplete_fields = ["taking_quiz"]
+    readonly_fields=("taking_quiz_title", "question_text", "question_topic_content", "answer_text", "answer_is_correct", )
+    extra = 0
+    model = TakingQuizAnswer
+
+
 
 @admin.register(TakingQuiz)
 class TakingQuizAdmin(admin.ModelAdmin):
@@ -112,6 +138,8 @@ class TakingQuizAdmin(admin.ModelAdmin):
     autocomplete_fields = ["quiz"]
     exclude = ("title",)
     readonly_fields=('title', )
+    inlines = [TakingQuizAnswerInlineAdmin]
+
     class Meta:
         model = TakingQuiz
 
@@ -124,14 +152,3 @@ class TakingQuizAdmin(admin.ModelAdmin):
         return obj.quiz.book
     get_quiz_book.admin_order_field  = 'quiz__book__name'  
     get_quiz_book.short_description = QuizStrings.QuizStrings.book_verbose_name
-
-@admin.register(TakingQuizAnswer)
-class TakingQuizAnswerAdmin(admin.ModelAdmin):
-    list_display = ["id", "taking_quiz_title", "question", "answer"]
-    list_display_links = ["id", "taking_quiz_title"]
-    search_fields = [ "id", "taking_quiz_title", "question_text", "question_topic_content", "answer_text", "taking_quiz__quiz__title", "taking_quiz__quiz__book"]
-    autocomplete_fields = ["taking_quiz"]
-    exclude = ("taking_quiz_title", "question_text", "question_topic_content", "answer_text", "answer_is_correct",)
-    readonly_fields=("taking_quiz_title", "question_text", "question_topic_content", "answer_text", "answer_is_correct", )
-    class Meta:
-        model = TakingQuizAnswer

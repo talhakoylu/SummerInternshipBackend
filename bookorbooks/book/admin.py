@@ -1,8 +1,9 @@
+from django.contrib.admin.options import InlineModelAdmin
 from book.models.reading_history_model import ReadingHistory
 from django import forms
 from book.models import Author, Book, BookLanguage, BookLevel, BookPage, Category
 from django.contrib import admin
-
+from nested_inline.admin import NestedStackedInline, NestedModelAdmin
 # Register your models here.
 
 
@@ -73,6 +74,44 @@ class AuthorAdmin(admin.ModelAdmin):
         model = Author
 
 
+# @admin.register(Book)
+# class BookAdmin(admin.ModelAdmin):
+#     list_display = [
+#         "id", "name", "slug", "page", "author", "level", "language", "category"
+#     ]
+#     list_display_links = ["id", "name"]
+#     fields = [("category", "level"), ("language", "author"), "name",
+#               "description", "cover_image", "page"]
+#     search_fields = ["name"]
+#     autocomplete_fields = ["author", "category", "language", "level"]
+
+#     class Meta:
+#         model = Book
+
+
+# @admin.register(BookPage)
+# class BookPageAdmin(admin.ModelAdmin):
+#     list_display = ["id", "title", "page_number", "created_at", "updated_at"]
+#     list_display_links = ["id", "title"]
+#     autocomplete_fields = ["book"]
+
+#     class Meta:
+#         model = BookPage
+
+
+@admin.register(ReadingHistory)
+class ReadingHistoryAdmin(admin.ModelAdmin):
+    list_display = ["id", "__str__", "is_finished", "created_at", "updated_at", "counter"]
+    list_display_links = ["id", "__str__"]
+
+    class Meta:
+        model = ReadingHistory
+
+class BookPageAdminInline(admin.StackedInline):
+    model = BookPage
+    extra = 0
+
+
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = [
@@ -83,25 +122,7 @@ class BookAdmin(admin.ModelAdmin):
               "description", "cover_image", "page"]
     search_fields = ["name"]
     autocomplete_fields = ["author", "category", "language", "level"]
-
+    readonly_fields = ["page"]
+    inlines = [BookPageAdminInline]
     class Meta:
         model = Book
-
-
-@admin.register(BookPage)
-class BookPageAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "page_number", "created_at", "updated_at"]
-    list_display_links = ["id", "title"]
-    autocomplete_fields = ["book"]
-
-    class Meta:
-        model = BookPage
-
-
-@admin.register(ReadingHistory)
-class ReadingHistoryAdmin(admin.ModelAdmin):
-    list_display = ["id", "__str__", "is_finished", "created_at", "updated_at", "counter"]
-    list_display_links = ["id", "__str__"]
-
-    class Meta:
-        model = ReadingHistory
