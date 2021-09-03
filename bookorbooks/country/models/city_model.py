@@ -12,11 +12,9 @@ class City(AbstractCountryBaseModel):
         verbose_name=CountryStrings.CityStrings.country_verbose_name)
     district = models.ForeignKey(
         "country.District",
-        on_delete=models.SET_NULL,
+        on_delete=models.CASCADE,
         related_name="district_cities",
-        verbose_name=CountryStrings.CityStrings.district_verbose_name,
-        null=True,
-        blank=True)
+        verbose_name=CountryStrings.CityStrings.district_verbose_name)
     name = models.CharField(
         max_length=150,
         verbose_name=CountryStrings.CityStrings.name_verbose_name,

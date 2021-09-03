@@ -20,7 +20,7 @@ class QuestionTests(APITestCase):
     def setUp(self) -> None:
         self.username = "johndoe"
         self.password = "test1234"
-        self.user = User.objects.create_user(username = self.username, password = self.password)
+        self.user = User.objects.create_user(username = self.username, password = self.password, user_type = 2)
         self.category = Category.objects.create(title = "Category Title", description = "Category description")
         self.book_level = BookLevel.objects.create(title = "A")
         self.book_language = BookLanguage.objects.create(language_name = "Language Name", language_code = "Language Code")
@@ -97,6 +97,7 @@ class QuestionTests(APITestCase):
         self.test_jwt_authentication()
         response2 = self.client.get(self.url_single_book)
         self.assertEqual(200, response2.status_code)
+        
 
     def test_get_last_enabled_quiz_by_book_id(self):
         """

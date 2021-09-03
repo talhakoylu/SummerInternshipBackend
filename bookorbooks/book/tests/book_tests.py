@@ -93,13 +93,13 @@ class BookDetailTests(APITestCase):
 
     def test_book_pages(self):
         """
-        In serializer class, book detail page includes book pages. This unit test method checks that detail result
+        In serializer class, book detail page includes book pages (it has changed, it no longer contains the BookPages field). This unit test method checks that detail result
         includes book pages or not.
         """
         url = reverse("book:book-detail", kwargs={"slug": self.book.slug})
         response = self.client.get(url)
         assert response.status_code == 200
-        assert "book_pages" in json.loads(response.content)
+        assert not "book_pages" in json.loads(response.content)
         
     def test_book_detail_foreignkey_fields(self):
         url = reverse("book:book-detail", kwargs={"slug": self.book.slug})
