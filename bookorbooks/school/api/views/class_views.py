@@ -1,10 +1,11 @@
+from school.models.class_model import Class
+from account.models import instructor_model
 from school.api.serializers.class_serializers import ClassSerializer
 from school.api.permissions import IsOwnClass
 from account.api.permissions import IsInstructor, IsInstructorHasSchool
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from school.api import serializers
-from school.models.class_model import Class
 from school.api.serializers import ClassCreateSerializer
 
 
@@ -14,6 +15,16 @@ class ClassListAPIView(ListAPIView):
     """
     queryset = Class.objects.all()
     serializer_class = ClassSerializer
+
+
+class ClassListByInstructorAPIView(ListAPIView):
+    """
+        Returns a list of all classes
+    """
+    serializer_class = ClassSerializer
+    
+    def get_queryset(self):
+        return Class.objects.filter(instructor = self.request.user.user_instructor, school = self.request.user.user_instructor.school)
 
 
 class CreateClassAPIView(CreateAPIView):

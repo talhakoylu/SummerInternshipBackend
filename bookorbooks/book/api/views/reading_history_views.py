@@ -36,9 +36,9 @@ class ReadingHistoryByChildIdAPIView(ListAPIView):
     """
     serializer_class = ReadingHistoryForByChildSerializer
     permission_classes = [IsAuthenticated, IsParentOrInstructor]
-    
+
     def get_queryset(self):
-        return get_list_or_404(ReadingHistory, child_id = self.kwargs["child_id"])
+        return ReadingHistory.objects.filter(child_id = self.kwargs["child_id"])
 
 
 class AddReadingHistoryAPIView(CreateAPIView):

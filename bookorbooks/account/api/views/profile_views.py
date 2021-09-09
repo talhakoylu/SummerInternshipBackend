@@ -2,7 +2,7 @@ from rest_framework.permissions import IsAuthenticated
 from account.api.permissions import IsChild, IsInstructor, IsParent
 from account.api.serializers.profile_serializers import MeSerializer, UserChildProfileSerializer, UserInstructorProfileSerializer, UserParentProfileSerializer
 from account.api.serializers.child_list_serializers import User
-from rest_framework.generics import RetrieveAPIView, RetrieveUpdateAPIView
+from rest_framework.generics import RetrieveAPIView, RetrieveUpdateAPIView, get_object_or_404
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -26,6 +26,21 @@ class ChildProfileUpdateAPIView(RetrieveUpdateAPIView):
 
     def perform_update(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class GetChildByIdentityAPIView(RetrieveAPIView):
+    """
+        Provides a "child profile" page API by child's identity number value.
+    """
+    queryset = User.objects.all()
+    serializer_class = UserChildProfileSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        """
+            Retrieves user details from the request.
+        """
+        return get_object_or_404(User, identity_number = self.kwargs["identity_number"])
 
 
 class ParentProfileUpdateAPIView(RetrieveUpdateAPIView):

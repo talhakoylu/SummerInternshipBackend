@@ -1,6 +1,7 @@
 from datetime import datetime
 from django.db.models.aggregates import Count
 from django.db.models.query_utils import Q
+from django.shortcuts import get_list_or_404
 from book.models.reading_history_model import ReadingHistory
 from constants.quiz_strings import QuizStrings
 from rest_framework import status
@@ -42,7 +43,7 @@ class TakingQuizHistoryByInstructorAPIView(RetrieveAPIView):
 
     def get_object(self):
         queryset = self.get_queryset()
-        obj = get_object_or_404(InstructorProfile, user=self.request.user.id)
+        obj = InstructorProfile.objects.filter(user=self.request.user.id)
         self.check_object_permissions(self.request, obj)
         return obj
 
@@ -71,6 +72,17 @@ class TakingQuizListByChildAPIView(ListAPIView):
 
     def get_queryset(self):
         return TakingQuiz.objects.filter(child=self.request.user.user_child)
+
+
+class TakingQuizListByChildIdAPIView(ListAPIView):
+    """
+        Returns the list of the requester child's quiz results.
+    """
+    serializer_class = TakingQuizSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return TakingQuiz.objects.filter(child=self.kwargs["child_id"])
 
 
 class CreateTakingQuizAPIView(CreateAPIView):

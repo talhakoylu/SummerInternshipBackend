@@ -1,4 +1,4 @@
-from school.api.permissions import IsOwnStudent
+from school.api.permissions import IsOwnClass, IsOwnStudent
 from school.models.class_model import Class
 from rest_framework.permissions import IsAuthenticated
 from school.api.serializers.student_list_serializers import CreateStudentListItemSerializer, StudentListByClassSerializer, StudentListSerializer
@@ -41,7 +41,7 @@ class StudentListByClassAPIView(ListAPIView):
         Returns a list of classes owned by the teacher and students in those classes.
     """
     serializer_class = StudentListByClassSerializer
-    permission_classes = [IsAuthenticated, IsInstructor]
+    permission_classes = [IsAuthenticated, IsInstructor, IsOwnClass]
 
     def get_queryset(self):
         return Class.objects.filter(instructor = self.request.user.id)

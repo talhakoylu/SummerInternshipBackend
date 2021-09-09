@@ -1,3 +1,4 @@
+from school.api.permissions import IsOwnClass
 from school.models.class_model import Class
 from school.api.serializers.school_quiz_history_report_serializers import ClassSerializerReport, SchoolSerializerReport
 from django.shortcuts import get_object_or_404
@@ -35,7 +36,7 @@ class GetClassStudentQuizHistoryByInstructor(ListAPIView):
     """
     queryset = School.objects.all()
     serializer_class = ClassSerializerReport
-    permission_classes = [IsAuthenticated, IsInstructor]
+    permission_classes = [IsAuthenticated, IsInstructor, IsOwnClass]
     
     def get_queryset(self):
         return Class.objects.filter(instructor = self.request.user.user_instructor)

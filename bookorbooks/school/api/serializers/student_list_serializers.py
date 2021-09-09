@@ -67,7 +67,7 @@ class CreateStudentListItemSerializer(ModelSerializer):
         """
         instance, created = self.Meta.model.objects.get_or_create(**validated_data)
         if not created:
-            raise ValidationError({'error':'Student alreaady added into this class..'})
+            raise ValidationError({'error':'Student already added into this class..'})
         return instance
 
 

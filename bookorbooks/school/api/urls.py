@@ -1,7 +1,7 @@
 from school.api.views.school_quiz_history_views import GetAllClassesBySchoolPrincipalAPIView, GetAllSchoolClassStudentByCountryAPIView, GetClassStudentQuizHistoryByInstructor
 from school.api.views.school_reading_history_views import GetAllClassReadingHistoryByPrincipalAPIView, GetAllSchoolClassStudentReadingHistoryByCountryAPIView, GetClassStudentReadingHistoryByInstructor
 from school.api.views.student_list_views import AddStudentListItemAPIView, StudentListAPIView, StudentListByClassAPIView, StudentListDestroyAPIView
-from school.api.views.class_views import ClassListAPIView, CreateClassAPIView, UpdateDestroyClassAPIView
+from school.api.views.class_views import ClassListAPIView, ClassListByInstructorAPIView, CreateClassAPIView, UpdateDestroyClassAPIView
 from school.api.views.school_views import SchoolDetailAPIView, SchoolListAPIView
 from django.urls import path
 
@@ -13,10 +13,9 @@ urlpatterns = [
          SchoolDetailAPIView.as_view(),
          name="school_detail"),
     path("class-list", ClassListAPIView.as_view(), name="list_class"),
+    path("class-list-by-instructor", ClassListByInstructorAPIView.as_view(), name="list_class_by_instructor"),
     path("class-add", CreateClassAPIView.as_view(), name="add_class"),
-    path("class-update/<id>",
-         UpdateDestroyClassAPIView.as_view(),
-         name="update_class"),
+    path("class-update/<id>", UpdateDestroyClassAPIView.as_view(), name="update_class"),
     path("add-student-list-item", AddStudentListItemAPIView.as_view(), name= "add_student_list_item"),
     path("student-list", StudentListAPIView.as_view(), name= "student_list"),
     path("student-list-by-class-instructor", StudentListByClassAPIView.as_view(), name= "student_list_by_class_instructor"),

@@ -1,3 +1,5 @@
+from django.core.validators import validate_email
+from constants.account_strings import AccountStrings
 from country.models.city_model import City
 from account.models.instructor_model import InstructorProfile
 from rest_framework import serializers
@@ -8,6 +10,16 @@ from django.contrib.auth import get_user_model
 from school.models import School
 
 User = get_user_model()
+
+def gender_validation(value):
+        if value < 1 or value > 3:
+            raise serializers.ValidationError(
+                AccountStrings.RegisterSerializerStrings.gender_error)
+
+def identity_number_validation(value):
+    if (not value.isdecimal()) or len(value) > 11:
+        raise serializers.ValidationError(
+                AccountStrings.RegisterSerializerStrings.identity_number_error)
 
 class ChildProfileSerializer(ModelSerializer):
     district = serializers.CharField(source = "city.district", read_only = True)
@@ -46,6 +58,15 @@ class UserChildProfileSerializer(ModelSerializer):
             "gender", "birth_date", "user_child"
         ]
 
+    def validate(self, attrs):
+        """
+        This method will check if the fields are valid.
+        """
+        validate_email(attrs["email"])
+        gender_validation(attrs["gender"])
+        identity_number_validation(attrs["identity_number"])
+        return attrs
+
     def update(self, instance, validated_data):
         """
             Parsing the partial data to save the other table.
@@ -68,6 +89,15 @@ class UserParentProfileSerializer(ModelSerializer):
             "id", "first_name", "last_name", "email", "identity_number",
             "gender", "birth_date", "user_parent"
         ]
+
+    def validate(self, attrs):
+        """
+        This method will check if the fields are valid.
+        """
+        validate_email(attrs["email"])
+        gender_validation(attrs["gender"])
+        identity_number_validation(attrs["identity_number"])
+        return attrs
 
     def update(self, instance, validated_data):
         """
@@ -92,6 +122,15 @@ class UserInstructorProfileSerializer(ModelSerializer):
             "gender", "birth_date", "user_instructor"
         ]
 
+    def validate(self, attrs):
+        """
+        This method will check if the fields are valid.
+        """
+        validate_email(attrs["email"])
+        gender_validation(attrs["gender"])
+        identity_number_validation(attrs["identity_number"])
+        return attrs
+
     def update(self, instance, validated_data):
         """
             Parsing the partial data to save the other table.
@@ -109,6 +148,7 @@ class MeSerializer(ModelSerializer):
         A serializer to use on the frontend. This serializer is using user model data for retrieving purpose.
     """
     user_type_value = serializers.CharField(source = "get_user_type_display")
+    is_principal = serializers.BooleanField(source="user_instructor.principal")
     class Meta:
         model = User
-        fields = ["id", "username", "email", "first_name", "last_name", "user_type", "user_type_value", "birth_date", "identity_number", "gender"]
+        fields = ["id", "username", "email", "first_name", "last_name", "user_type", "user_type_value", "birth_date", "identity_number", "gender", "is_principal"]

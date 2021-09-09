@@ -1,4 +1,4 @@
-from quiz.api.views.taking_quiz_views import CreateTakingQuizAPIView, CreateTakingQuizAnswerAPIView, StudentsTakingQuizHistoryByClassIdAPIView, TakingQuizHistoryByInstructorAPIView, TakingQuizHistoryByParentAPIView, TakingQuizListByChildAPIView, UpdateTakingQuizAPIView
+from quiz.api.views.taking_quiz_views import CreateTakingQuizAPIView, CreateTakingQuizAnswerAPIView, StudentsTakingQuizHistoryByClassIdAPIView, TakingQuizHistoryByInstructorAPIView, TakingQuizHistoryByParentAPIView, TakingQuizListByChildAPIView, TakingQuizListByChildIdAPIView, UpdateTakingQuizAPIView
 from quiz.api.views.questions_views import GetLastEnabledQuizByBookIdAPIView, GetQuestionByIdAPIView, GetQuestionsByEnabledQuizIdAPIView, GetQuestionsByQuizIdAPIView, QuestionsAllAPIView
 from quiz.api.views.quiz_views import OnlyEnabledQuizesAPIView, QuizListAllAPIView
 from django.urls import path
@@ -19,6 +19,7 @@ urlpatterns = [
     path("get-students-quiz-history", TakingQuizHistoryByInstructorAPIView.as_view(), name="get_students_quiz_history"),
     path("get-students-quiz-history-by-class/<class_id>", StudentsTakingQuizHistoryByClassIdAPIView.as_view(), name="get_students_quiz_history_by_class"),
     path("get-quiz-history-by-child", TakingQuizListByChildAPIView.as_view(), name="get_quiz_history_by_child"),
+    path("get-quiz-history-by-child-id/<child_id>", TakingQuizListByChildIdAPIView.as_view(), name="get_quiz_history_by_child_id"),
     path("create-taking-quiz", CreateTakingQuizAPIView.as_view(), name="create_taking_quiz"),
     path("update-taking-quiz/<id>", UpdateTakingQuizAPIView.as_view(), name="update_taking_quiz"),
     path("create-taking-quiz-answer", CreateTakingQuizAnswerAPIView.as_view(), name="create_taking_quiz_answer"),
